@@ -15,9 +15,8 @@ Static marketing and legal website for the Zayvori recipe app. No build step —
 | `styles.css` | All styles — BEM-ish classes, CSS custom properties for brand tokens |
 | `script.js` | Mobile nav toggle and scroll fade-in animations |
 | `CNAME` | Custom domain: `zayvori.com` |
-| `robots.txt` | Allows all crawlers; blocks `/auth/`; points to sitemap |
+| `robots.txt` | Allows all crawlers; points to sitemap |
 | `sitemap.xml` | Lists all public pages for search engine discovery — update `lastmod` and add new `<url>` entries whenever pages are added or removed |
-| `auth/callback/index.html` | Deep-link bridge for Supabase email confirmations — redirects `zayvori.com/auth/callback?code=xxx` to the `zayvori://` app scheme; shows a friendly message for `#message=...` responses (email-change old-address step) and a "open on your phone" fallback on desktop |
 | `assets/` | Images: `zayvori_logo.png`, `zayvori_icon.png`, `screenshot.png` |
 
 ## Brand tokens (styles.css)
@@ -33,53 +32,58 @@ Fonts: `Playfair Display` (headings) and `Inter` (body), loaded from Google Font
 
 ## Brand voice & philosophy
 
-Zayvori is a **calm, welcoming alternative to social media** for people who love food. All recipes are public and shared freely — like sitting around one long table where everyone brings something they love.
+Zayvori is a **calm, private alternative to social media** for people who love food. There are no accounts and nothing is shared between users — your recipes exist only on your own device, like a personal recipe box.
 
-**Core tone:** Calm, warm, inclusive, simple. Focus on enjoyment, not performance.
+**Core tone:** Calm, warm, private, simple. Focus on enjoyment, not performance.
 
 **Prefer language like:**
-- "save what you like", "discover recipes", "share freely"
+- "save what you like", "your own collection", "private to you"
 - "enjoy cooking", "for yourself and your loved ones"
-- "calm", "welcoming", "quiet"
+- "calm", "quiet", "your device, your data"
 
 **Avoid language like:**
 - "followers", "engagement", "build your audience", "go viral", "top creators"
+- "discover the community", "shared", "browse what others made" — there is no cross-user content at all
 - any comparison, ranking, or performance language
 - "results", "metrics", "grow"
 
 **What Zayvori intentionally does NOT have:**
-- Follows or follower counts
-- Public profiles or usernames
+- Accounts, sign-up, or sign-in
+- Any sharing or visibility between users — nothing you save is ever seen by anyone else
+- Follows, followers, or public profiles
 - Comment sections
 - Visible like counts or popularity metrics
 - An algorithm ranking content
+- Any server-side storage of recipes, photos, or notes
 
-If a proposed feature or wording contradicts this philosophy, flag it for review rather than implementing it directly.
+If a proposed feature or wording contradicts this philosophy — especially anything implying cross-user sharing, discovery, or cloud sync — flag it for review rather than implementing it directly.
 
 ## App capabilities (keep website copy aligned with these)
 
-The companion app (`zayvori-app`) is an Expo/React Native recipe app. Accurate feature set:
+The companion app (`recipe-app`) is an Expo/React Native recipe app, fully local-only — no backend, no accounts. Accurate feature set:
 
 - **Import recipes** from any URL (food blogs, social media) — paste a link or share directly from another app
 - **Paste recipe text** — clipboard import mode for copying recipe captions (e.g. TikTok, recipe cards) that can't be shared directly
-- **Smart social parsing** — extracts recipes from Instagram and TikTok captions, handles short URLs and embedded JSON-LD / OpenGraph data
+- **Smart social parsing** — extracts recipes from Instagram and TikTok captions, handles short URLs and embedded JSON-LD / OpenGraph data. Imports never carry a photo from the source — only the user's own photos are ever stored.
 - **Create recipes manually** — title, description, serving size, ingredient sections, steps, photo
 - **Ingredient sections** — ingredients can be split into named sections (e.g. For the pastry / For the filling); a single section with no title is the default
-- **Serving size** — optional per-recipe serving count (1–10); hidden from viewers when set to 0
-- **My Recipes tab** — all recipes the user has created or saved
-- **Collections** — named groups of recipes (e.g. "Weeknight Dinners", "Baking")
-- **Search tab** — browse and search recipes shared by other Zayvori users (community discovery); imported recipes are private to the importing user and do not appear in Search
-- **Like recipes** — heart community recipes; liked recipes appear in a dedicated Liked tab
-- **Personal notes** — private per-recipe notes, synced via Supabase
-- **Offline support** — failed saves queue locally and sync on reconnect
-- **Account settings** — display name, email, password change
+- **Serving size** — optional per-recipe serving count (1–10); hidden when set to 0
+- **My Recipes** — the app's home screen, listing every recipe stored on the device
+- **Collections** — named groups of recipes (e.g. "Weeknight Dinners", "Baking"), on a separate screen from My Recipes
+- **Personal notes** — private per-recipe notes, stored only on-device, never synced anywhere
+- **Export / Import** — bundle your whole library (recipes, collections, notes, photos) into a single backup file via Settings > Data & Backup, shared via whatever method you choose (AirDrop, email, a cloud drive). Zayvori never receives or stores this file — it's the only way data ever leaves the device.
+- **Local storage** — everything (recipes, collections, notes, photos) is stored entirely on-device via `expo-sqlite` and on-device file storage; nothing is uploaded anywhere
 
 Features that do NOT exist (do not add to marketing copy):
+- Accounts, sign-up, sign-in, or any user profile
+- Search / discovery of other users' recipes, or any cross-user visibility
+- Liking/saving other users' content — there are no other users' recipes to see
 - Cook Mode / step-by-step reading mode
 - Shared / collaborative collections
 - Star ratings
 - Meal planning
 - Profile photos
+- Cloud sync of any kind
 
 ## Legal pages — placeholders
 
