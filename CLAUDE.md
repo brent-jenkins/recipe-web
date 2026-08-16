@@ -45,6 +45,18 @@ There is **no logo image file.** The old `zayvori_logo.png` / `zayvori_icon.png`
 
 This is deliberate: it scales cleanly, costs no request, and can't go stale the way a baked-in PNG did. Don't reintroduce a raster logo without a reason.
 
+**The plum glyph is shared verbatim with the app** (`recipe-app/assets/icon-source.svg`, from which its launcher icons are rendered). Site and app are the same mark, not two drawings that resemble each other — change one and change both, then re-render the app's PNGs.
+
+It appears in three colourways, and the differences are deliberate rather than drift:
+
+| Where | Fruit | Leaf | Why |
+|---|---|---|---|
+| `favicon.svg` | `--damson` on a stone tile | `#86682F` | Matches the app icon exactly |
+| Nav `.brandmark` | `--damson` on white | `#86682F` | Dark brass; the light one washes out on a light ground |
+| Footer `.brandmark` | `--stone` on `--plum-deep` | `#C9A868` | A knockout for the dark band — the only place the light brass belongs |
+
+A damson is a dark purple plum, so **the fruit carries the hue and the ground stays light** everywhere except the footer knockout. An earlier draft had it inverted and read as a negative.
+
 ## Brand voice & philosophy
 
 Damson Kitchen is a **calm, private alternative to social media** for people who love food. There are no accounts and nothing is shared between users — your recipes exist only on your own device, like a personal recipe box.
