@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://zayvori.com/sitemap.xml
+Sitemap: https://damsonkitchen.com/sitemap.xml

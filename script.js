@@ -1,6 +1,18 @@
-// Cookie consent
+// Cookie consent.
+//
+// Gated on an analytics tag actually being present. The site currently ships no
+// Google tag (removed 2026-08-16, pending a new Damson Kitchen property — the old
+// one belonged to Zayvori), so this whole block is inert: no banner is shown and
+// no cookie is set, because there is nothing to consent to.
+//
+// Add a gtag snippet back to the pages and the banner returns on its own; nothing
+// here needs changing. The guard is also what stops this file throwing a
+// ReferenceError with no tag present — an uncaught throw here would halt the rest
+// of the script and take the mobile nav and scroll animations with it.
 (function () {
-  var CONSENT_KEY = 'zayvori_cookie_consent';
+  if (typeof gtag !== 'function') return;
+
+  var CONSENT_KEY = 'damsonkitchen_cookie_consent';
   var stored = localStorage.getItem(CONSENT_KEY);
 
   if (stored === 'granted') {
