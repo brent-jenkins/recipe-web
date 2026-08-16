@@ -80,13 +80,13 @@ The companion app (`recipe-app`) is an Expo/React Native app, fully local-only �
 - **Import recipes** from any URL (food blogs, social media) — paste a link or share directly from another app
 - **Paste recipe text** — clipboard import for captions that can't be shared directly (e.g. TikTok)
 - **Smart social parsing** — Instagram/TikTok captions, short URLs, JSON-LD and OpenGraph. Imports never carry a photo from the source — only the user's own photos are ever stored
-- **Ingredient sections** — recognised on import ("For the pastry") and editable
+- **Ingredient sections** — recognized on import ("For the pastry") and editable
 - **Serving-size scaling** — change the servings and amounts rescale, rendered as kitchen fractions
 - **Cook Mode** — full-screen step-by-step, large text, screen stays awake, ingredients in a bottom sheet
 - **Meal planner** — one week at a time, Monday to Sunday, with slots and free-text occasions, and a per-meal head count
 - **Shopping list** — derived from upcoming planned meals, merged by ingredient and grouped by supermarket aisle. From today forward, never the start of the week
 - **Collections** — named groups of recipes
-- **Favourites** — heart a recipe; gets its own filter and collection once you have at least one
+- **Favorites** — heart a recipe; gets its own filter and collection once you have at least one
 - **Meal types** — breakfast, lunch, dinner, dessert, snack, drink, baking, side; used for filtering and tile icons
 - **Personal notes** — private per-recipe notes, on-device only
 - **Share a recipe** — see the nuance above

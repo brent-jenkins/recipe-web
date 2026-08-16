@@ -201,7 +201,7 @@ body {
 .nav__logo-text {
   letter-spacing: -0.01em;
 }
-/* Second word sits in damson so the mark carries the hue without a coloured
+/* Second word sits in damson so the mark carries the hue without a colored
    heading — the same rationing rule the app follows. */
 .nav__logo-text em {
   font-style: normal;
