@@ -59,9 +59,15 @@ A damson is a dark purple plum, so **the fruit carries the hue and the ground st
 
 ## Brand voice & philosophy
 
-Damson Kitchen is a **calm, private alternative to social media** for people who love food. There are no accounts and nothing is shared between users — your recipes exist only on your own device, like a personal recipe box.
+Damson Kitchen is **a recipe book you own, not a service you rent.** Everything lives on the user's own phone: no account, no subscription, no server holding the collection — which is why it works with no signal, and why nobody can take it away or start charging for it later.
 
-**Core tone:** Calm, warm, private, simple. Focus on enjoyment, not performance. UK English.
+**This positioning replaced an earlier one (2026-08-16), and the reason matters.** The site used to lead with "a calm, private alternative to social media". That framing was a reaction to the *previous* version of the app, which had a cross-user feed to be an alternative *to*. With that gone, the copy was arguing against something that no longer exists, and asking readers to feel overwhelmed before the pitch could land. The ownership story is concrete, checkable, and differentiates against the actual competition — which is overwhelmingly cloud-based and subscription-funded.
+
+**"No feed, no algorithm" survives as one supporting point, not the headline.** It's still true and still worth saying; it just isn't the reason someone chooses this app.
+
+**"No subscription" is a durable claim, so use it freely.** The planned monetisation is a one-off unlock, not a recurring charge — the claim stays true after it ships.
+
+**Core tone:** Warm, plain, practical. Focus on cooking and on ownership, not on performance or on what the app refuses to be. US English (see the app repo's CLAUDE.md for why).
 
 **Prefer language like:**
 - "save what you like", "your own collection", "private to you"

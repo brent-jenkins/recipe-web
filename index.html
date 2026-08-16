@@ -26,12 +26,12 @@
   <meta property="og:site_name" content="Damson Kitchen" />
   <meta property="og:title" content="Damson Kitchen — Your Own Private Recipe Book" />
   <meta property="og:description" content="Import recipes, plan the week, and build a shopping list. Everything stays on your phone." />
-  <meta property="og:image" content="https://damsonkitchen.com/assets/screenshot.png" />
+  <meta property="og:image" content="https://damsonkitchen.com/assets/og-image.png" />
   <meta property="og:url" content="https://damsonkitchen.com/" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Damson Kitchen — Your Own Private Recipe Book" />
   <meta name="twitter:description" content="Import recipes, plan the week, and build a shopping list. Everything stays on your phone." />
-  <meta name="twitter:image" content="https://damsonkitchen.com/assets/screenshot.png" />
+  <meta name="twitter:image" content="https://damsonkitchen.com/assets/og-image.png" />
   <title>Damson Kitchen — Your Own Private Recipe Book</title>
   <script type="application/ld+json">
   {
@@ -47,7 +47,7 @@
       "price": "0",
       "priceCurrency": "GBP"
     },
-    "screenshot": "https://damsonkitchen.com/assets/screenshot.png",
+    "screenshot": "https://damsonkitchen.com/assets/og-image.png",
     "image": "https://damsonkitchen.com/assets/favicon.svg"
   }
   </script>
@@ -84,24 +84,19 @@
       <div class="hero__text">
         <span class="hero__eyebrow">Early Access — Android</span>
         <h1 class="hero__headline">Every recipe you love,<br/>in <em>one place</em></h1>
-        <p class="hero__sub">No more screenshots, bookmarks or scattered notes. Import a recipe from anywhere, plan the week around it, and take a shopping list to the store — all kept privately on your own phone.</p>
+        <p class="hero__sub">No more screenshots, bookmarks or scattered notes. Import a recipe from anywhere, plan the week around it, and take a shopping list to the store. Everything lives on your phone — no account, no subscription, and it works with no signal at all.</p>
         <div class="hero__ctas">
           <!-- 404s until the closed testing track is live in Play Console. -->
           <a href="https://play.google.com/apps/testing/com.damsonkitchen.app" class="btn btn--primary" target="_blank" rel="noopener">Become a Tester</a>
           <a href="#features" class="btn btn--ghost">Learn More</a>
         </div>
       </div>
-      <div class="hero__phone" aria-hidden="true">
-        <div class="phone-frame">
-          <div class="phone-frame__btn phone-frame__btn--vol-up"></div>
-          <div class="phone-frame__btn phone-frame__btn--vol-down"></div>
-          <div class="phone-frame__btn phone-frame__btn--power"></div>
-          <div class="phone-frame__camera"></div>
-          <div class="phone-frame__screen">
-            <img src="assets/screenshot.png" alt="Damson Kitchen showing a list of saved recipes" class="phone-frame__screenshot">
-          </div>
+      <div class="hero__phone">
+        <div class="shot-stack">
+          <img src="assets/shots/detail.png" alt="" class="shot shot--back" width="1080" height="1920">
+          <img src="assets/shots/recipes.png" alt="The Damson Kitchen recipe list, showing saved recipes with photos, meal types and serving sizes" class="shot shot--front" width="1080" height="1920">
         </div>
-        <div class="hero__blob"></div>
+        <div class="hero__blob" aria-hidden="true"></div>
       </div>
     </div>
     <div class="hero__wave">
@@ -117,7 +112,7 @@
       <div class="section-header">
         <span class="section-eyebrow">Why Damson Kitchen</span>
         <h2>Everything you need, nothing you don't</h2>
-        <p>No social pressure, no algorithm, no noise. Just a calm, personal space for the recipes you love — and the practical tools to actually cook them.</p>
+        <p>Everything you need to keep the recipes you love and actually cook them — and nothing you have to sign up for, sync, or pay monthly to keep.</p>
       </div>
       <div class="features__grid">
         <div class="feature-card">
@@ -210,19 +205,27 @@
     <div class="container">
       <div class="philosophy__inner">
         <div class="philosophy__story">
-          <span class="section-eyebrow">Our Philosophy</span>
-          <h2>A quiet space, just for you</h2>
-          <p>Your recipe box was never meant to be a performance. Damson Kitchen is a private, personal space — nothing you save is visible to anyone but you, stored only on your own device.</p>
-          <p>No accounts, no profiles, nothing to sign up for. Just your recipes, kept the way you like them, for everyday cooking, family meals, or something new to try.</p>
+          <span class="section-eyebrow">How It Works</span>
+          <h2>Your recipes, and they stay yours</h2>
+          <p>Everything lives on your own phone. There is no account to create, nothing is uploaded, and no server holds your collection — which is exactly why it works with no signal, and why nobody can take it away or start charging you for it later.</p>
+          <p>Just your recipes, kept the way you like them, ready whenever you need them.</p>
         </div>
         <div class="philosophy__values">
           <div class="philosophy__value">
-            <h3>Not a social network</h3>
-            <p>There are no followers, no public profiles, no comment sections, and no one else ever sees what you save. No pressure to perform — just recipes to enjoy.</p>
+            <h3>Works with no signal</h3>
+            <p>Your recipes are already on your phone, so there is nothing to load. A patchy kitchen, a friend's house, a cottage in the middle of nowhere — it all works the same.</p>
           </div>
           <div class="philosophy__value">
-            <h3>No algorithm, no noise</h3>
-            <p>Your collection is your own. Nobody sees your choices, nobody ranks them, nothing is optimized for engagement. No feeling of being "not enough" — just cooking.</p>
+            <h3>Nothing to subscribe to</h3>
+            <p>A recipe book is something you own, not something you rent. No monthly fee, and no risk of losing your collection because you stopped paying for it.</p>
+          </div>
+          <div class="philosophy__value">
+            <h3>Yours to take with you</h3>
+            <p>Export the whole collection to a single file whenever you like, and move it to a new phone yourself. No lock-in, because there is nothing to be locked into.</p>
+          </div>
+          <div class="philosophy__value">
+            <h3>No feed, no algorithm</h3>
+            <p>Nobody else sees what you save, nothing ranks it, and nothing is optimized for engagement. It's a recipe book, not a place to perform.</p>
           </div>
         </div>
       </div>
@@ -260,6 +263,34 @@
             <p>Open Cook Mode and work through it a step at a time, screen awake and hands free. Afterwards, add a note about what you'd change.</p>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCREENSHOTS -->
+  <section class="gallery">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">A Look Inside</span>
+        <h2>Everything in one place</h2>
+      </div>
+      <div class="gallery__strip">
+        <figure class="gallery__item">
+          <img src="assets/shots/planner.png" alt="The meal planner, showing recipes placed on days of the week under breakfast, lunch and dinner headings" class="shot" width="1080" height="1920" loading="lazy">
+          <figcaption>Plan the week</figcaption>
+        </figure>
+        <figure class="gallery__item">
+          <img src="assets/shots/shopping.png" alt="The shopping list, grouped by supermarket aisle with items ticked off" class="shot" width="1080" height="1920" loading="lazy">
+          <figcaption>Shop by aisle</figcaption>
+        </figure>
+        <figure class="gallery__item">
+          <img src="assets/shots/cookmode.png" alt="Cook Mode, showing a single recipe step in large text with a progress bar" class="shot" width="1080" height="1920" loading="lazy">
+          <figcaption>Cook step by step</figcaption>
+        </figure>
+        <figure class="gallery__item">
+          <img src="assets/shots/collections.png" alt="Collections, showing Favorites alongside named groups of recipes" class="shot" width="1080" height="1920" loading="lazy">
+          <figcaption>Keep it organized</figcaption>
+        </figure>
       </div>
     </div>
   </section>
