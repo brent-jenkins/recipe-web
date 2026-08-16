@@ -3,6 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Google tag (gtag.js).
+       The consent default MUST stay above the gtag.js <script> and MUST stay
+       'denied': it is what stops analytics cookies being set before the visitor
+       accepts the banner in script.js, which is what the Privacy Policy promises
+       and what UK GDPR / PECR require. script.js flips it to 'granted' on accept,
+       and is itself gated on gtag() existing, so removing this block disables the
+       banner cleanly rather than breaking it. -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {'analytics_storage': 'denied'});
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1540ELSDKP"></script>
+  <script>
+    gtag('js', new Date());
+    gtag('config', 'G-1540ELSDKP');
+  </script>
   <meta name="description" content="Damson Kitchen — your own private recipe book. Import recipes, plan the week, and build a shopping list. Everything stays on your phone." />
   <link rel="canonical" href="https://damsonkitchen.com/" />
   <meta property="og:type" content="website" />

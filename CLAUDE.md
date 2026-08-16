@@ -123,11 +123,20 @@ When the app moves to open / public release, update:
 - Both badge links → the Play Store URL above
 - iOS is not yet available (no Apple Developer account); add the App Store badge once live
 
+## Analytics and the cookie banner
+
+The site runs **Google Analytics 4, property `G-1540ELSDKP`** — the Damson Kitchen property. The legacy `G-7WECL7NJNR` belonged to Zayvori and is gone.
+
+Three things about the snippet are load-bearing and easy to break by pasting Google's default over it:
+
+1. **`gtag('consent', 'default', {'analytics_storage': 'denied'})` must run *above* the `gtag.js` script tag.** Google's own copy-paste snippet omits it. Without it, GA sets cookies on page load — before the visitor has touched the banner — which contradicts what `privacy.html` promises and what UK GDPR / PECR require. `script.js` flips it to `'granted'` on accept.
+2. **The consent block sits *below* `<meta charset>`, not immediately after `<head>`.** Browsers sniff only the first 1024 bytes for the charset; the snippet is ~900 bytes, so pasting it first pushes charset to the edge of that window and risks the page's em-dashes rendering as mojibake.
+3. **`script.js`'s banner is gated on `typeof gtag === 'function'`.** That is what lets the tag be removed cleanly — no tag means no banner and no cookie, rather than a `ReferenceError` that halts the script and takes the mobile nav and scroll animations with it. Keep the guard.
+
 ## Known stale items
 
 - **`assets/screenshot.png`** shows the old app in the old palette. It's the `og:image` and the hero phone mock, so it's the first thing a link preview shows.
-- **There is no analytics tag at all.** The legacy `G-7WECL7NJNR` (a Zayvori property) was removed 2026-08-16 pending a new one. The cookie-consent block in `script.js` is gated on `typeof gtag === 'function'`, so with no tag present no banner is shown and no cookie is set — paste a gtag snippet back into the page `<head>`s and the banner returns by itself. **Keep that guard**: without it the file throws a `ReferenceError` when no tag is present, which halts the rest of the script and takes the mobile nav and scroll animations down with it.
-- **`privacy.html` still describes Google Analytics** (sections on lawful basis and cookies). That's currently over-disclosure rather than a false statement — the policy says cookies are only set after banner consent, and with no tag there is no banner and no cookie. Re-check it when the new property goes in, or trim those passages if analytics is staying off.
+- **`assets/screenshot.png`** shows the old app in the old palette. It's the `og:image` and the hero phone mock, so it's the first thing a link preview shows.
 - **`abf9c62de6f546c3b885254be5a901a2.txt`** is a site-verification file for the old domain and is almost certainly dead weight now.
 
 ## Deployment
