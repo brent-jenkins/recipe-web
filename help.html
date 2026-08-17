@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Google tag (gtag.js).
+       The consent default MUST stay above the gtag.js <script> and MUST stay
+       'denied': it is what stops analytics cookies being set before the visitor
+       accepts the banner in script.js, which is what the Privacy Policy promises
+       and what UK GDPR / PECR require. script.js flips it to 'granted' on accept,
+       and is itself gated on gtag() existing, so removing this block disables the
+       banner cleanly rather than breaking it. -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {'analytics_storage': 'denied'});
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1540ELSDKP"></script>
+  <script>
+    gtag('js', new Date());
+    gtag('config', 'G-1540ELSDKP');
+  </script>
+  <meta name="description" content="How to use Damson Kitchen — importing recipes, writing your own, scaling servings, Cook Mode, the meal planner, shopping lists, and moving your recipes to a new phone." />
+  <link rel="canonical" href="https://damsonkitchen.com/help.html" />
+  <title>Guides &amp; Help — Damson Kitchen</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="apple-touch-icon" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav">
+    <div class="nav__inner container">
+      <a href="/" class="nav__logo">
+        <svg class="brandmark" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><g transform="translate(16,16) scale(0.28) translate(-53,-51)"><path d="M50 30C50.5 24 51 20 52 15" stroke="#833060" stroke-width="4.5" stroke-linecap="round" fill="none"/><ellipse cx="50" cy="59" rx="30" ry="31" fill="#833060"/><path d="M50 31C43.5 45 43.5 73 49 86" stroke="#5E2145" stroke-width="3.5" stroke-linecap="round" fill="none" opacity=".55"/><path d="M53 28C62 16 78 12 86 17 79 26 64 31 53 28Z" fill="#86682F"/></g></svg><span class="nav__logo-text">Damson <em>Kitchen</em></span>
+      </a>
+      <nav class="nav__links">
+        <a href="/#features">Features</a>
+        <a href="/#how-it-works">How It Works</a>
+        <a href="/#download" class="btn btn--sm">Get the App</a>
+      </nav>
+      <button class="nav__hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="legal-hero">
+    <div class="container legal-hero__inner">
+      <span class="section-eyebrow">Guides</span>
+      <h1>Guides &amp; Help</h1>
+      <p class="legal-hero__meta">Everything you can do with Damson Kitchen, in plain English.</p>
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+  <main class="legal-content">
+    <div class="container legal-container">
+
+      <div class="legal-notice">
+        <strong>Before anything else:</strong> there is no account and no sign-in. Open the app and start cooking. Every recipe, photo, and note lives on your phone and nowhere else — which is why the app works with no signal, and why nothing you save is ever visible to anyone but you.
+      </div>
+
+      <!-- INDEX -->
+      <nav class="guide-index" aria-label="Guides">
+        <a class="guide-card" href="#adding">
+          <span class="guide-card__title">Adding recipes</span>
+          <span class="guide-card__desc">Import from a link, paste text, or write your own</span>
+        </a>
+        <a class="guide-card" href="#cooking">
+          <span class="guide-card__title">Cooking</span>
+          <span class="guide-card__desc">Scale the servings and follow along in Cook Mode</span>
+        </a>
+        <a class="guide-card" href="#planning">
+          <span class="guide-card__title">Planning the week</span>
+          <span class="guide-card__desc">Plan meals, then build a shopping list from them</span>
+        </a>
+        <a class="guide-card" href="#organizing">
+          <span class="guide-card__title">Organizing</span>
+          <span class="guide-card__desc">Collections, favorites, meal types, and notes</span>
+        </a>
+        <a class="guide-card" href="#sharing">
+          <span class="guide-card__title">Sharing a recipe</span>
+          <span class="guide-card__desc">Pass one on without uploading anything</span>
+        </a>
+        <a class="guide-card" href="#backup">
+          <span class="guide-card__title">Backups &amp; new phones</span>
+          <span class="guide-card__desc">Export your library and bring it with you</span>
+        </a>
+        <a class="guide-card" href="#settings">
+          <span class="guide-card__title">Settings</span>
+          <span class="guide-card__desc">Light or dark, and which day starts your week</span>
+        </a>
+        <a class="guide-card" href="#trouble">
+          <span class="guide-card__title">Troubleshooting</span>
+          <span class="guide-card__desc">When an import doesn't work, and other snags</span>
+        </a>
+      </nav>
+
+      <!-- ADDING -->
+      <section class="legal-section" id="adding">
+        <h2>Adding recipes</h2>
+
+        <figure class="guide-figure guide-figure--right">
+          <img class="shot" src="assets/shots/recipes.png" alt="The My Recipes list in Damson Kitchen" loading="lazy" />
+        </figure>
+
+        <h3>Import from a website or a social post</h3>
+        <p>The quickest way is to send the recipe to Damson Kitchen from wherever you found it. In your browser, Instagram, or your notes app, tap <strong>Share</strong> and pick <strong>Damson Kitchen</strong>. The app reads the page and fills in the title, ingredients, and method for you to check before saving.</p>
+        <p>You can also tap the <strong>clipboard icon</strong> at the top of My Recipes and paste a link or the recipe text directly.</p>
+        <p>Two things worth knowing:</p>
+        <ul class="legal-steps">
+          <li><strong>Always give it a quick read before saving.</strong> Recipe pages vary enormously, and the app is deliberately cautious — it would rather leave something as an ingredient than guess wrong and quietly drop it.</li>
+          <li><strong>Imported recipes never bring a photo with them.</strong> That's on purpose: a photo on someone else's site belongs to whoever took it. You get a link back to the original instead, and you're free to add your own picture.</li>
+        </ul>
+
+        <h3>Write your own</h3>
+        <p>Tap <strong>Add recipe</strong> and fill in as much or as little as you like — only a title is required.</p>
+        <ul class="legal-steps">
+          <li><strong>Ingredients are just typed as you'd say them</strong> — "200g plain flour", "2 large eggs", "a few sprigs of thyme". Underneath, the app works out the amount so it can scale the recipe later. It shows you what it understood in small grey text beneath the line; tap that to correct it if it got something wrong.</li>
+          <li><strong>Vague amounts are fine.</strong> "A good handful of parsley" stays exactly as you wrote it. Nothing is invented, and the line simply sits out of any scaling.</li>
+          <li><strong>Steps</strong> can be reordered by dragging the numbered circle.</li>
+          <li><strong>Photos:</strong> tap <strong>+</strong> to take a photo of the finished dish or choose one from your library. The first photo is the cover — tap any other photo to promote it.</li>
+        </ul>
+
+        <h3>Ingredient sections</h3>
+        <p>Recipes with parts — a pastry and a filling, a cake and its icing — can group ingredients under headings. On import the app spots headings like "For the topping" and sets them up for you. To add one yourself, use the <strong>Section</strong> action above the ingredient list.</p>
+        <p>Deleting a section never throws ingredients away without asking. If it has anything in it, you'll be offered the option to move those ingredients into the section next to it instead. On the last remaining section the control becomes <strong>Remove heading</strong>, which turns the list back into a plain one with everything intact.</p>
+      </section>
+
+      <!-- COOKING -->
+      <section class="legal-section" id="cooking">
+        <h2>Cooking</h2>
+
+        <figure class="guide-figure guide-figure--right">
+          <img class="shot" src="assets/shots/cookmode.png" alt="Cook Mode showing one step at a time in large text" loading="lazy" />
+        </figure>
+
+        <h3>Change the number of servings</h3>
+        <p>If a recipe says how many it serves, a stepper sits at the top of the ingredients. Change the number and every amount rescales — shown as kitchen fractions, so you get <strong>¾ tsp</strong> rather than 0.75. Tap the number itself to type one instead of tapping <strong>+</strong> repeatedly.</p>
+        <p>This never rewrites the recipe. It's a view, and the original amounts are always what you saved. Tap the "scaled from" hint to go back.</p>
+        <p>Tap any ingredient to check it off as you gather it. Those ticks clear when you leave the recipe.</p>
+
+        <h3>Cook Mode</h3>
+        <p>Tap <strong>Cook</strong> to get one step at a time in large text, sized to be read at arm's length with floury hands. Swipe or use the full-width buttons to move between steps, and pull up the bottom sheet at any point to check the ingredients without losing your place.</p>
+        <p><strong>Your screen stays awake for as long as Cook Mode is open</strong>, and goes back to normal the moment you leave it.</p>
+        <p>If you scaled the servings before tapping Cook, Cook Mode shows the scaled amounts too.</p>
+      </section>
+
+      <!-- PLANNING -->
+      <section class="legal-section" id="planning">
+        <h2>Planning the week</h2>
+
+        <figure class="guide-figure guide-figure--right">
+          <img class="shot" src="assets/shots/planner.png" alt="The weekly meal planner" loading="lazy" />
+        </figure>
+
+        <h3>The planner</h3>
+        <p>The <strong>Planner</strong> tab shows one week at a time, with breakfast, lunch, dinner, and snack slots on each day. Pick a day, choose a recipe, and set the slot.</p>
+        <ul class="legal-steps">
+          <li><strong>Occasions</strong> are free text — "Sunday lunch", "Mum's birthday". Labels you've used before are offered as suggestions.</li>
+          <li><strong>Head count lives on the meal, not the recipe.</strong> The same dish can feed four on Tuesday and twelve at a party. Leave it blank to use whatever the recipe says.</li>
+          <li>Opening a planned meal shows it already scaled to that head count.</li>
+        </ul>
+        <p>You can plan the same recipe twice in one day, or two recipes in one slot — neither is treated as a mistake.</p>
+
+        <h3>The shopping list</h3>
+        <figure class="guide-figure guide-figure--right">
+          <img class="shot" src="assets/shots/shopping.png" alt="The shopping list grouped by supermarket aisle" loading="lazy" />
+        </figure>
+        <p>The <strong>Shopping</strong> tab builds itself from what you've planned, grouped by supermarket aisle so you're not criss-crossing the shop. Choose whether to cover the next one, two, or four weeks.</p>
+        <ul class="legal-steps">
+          <li><strong>It starts from today, not from Monday.</strong> A meal you already ate shouldn't follow you round the shop.</li>
+          <li><strong>Amounts are added up where they can be.</strong> 200g flour for one meal and 150g for another becomes 350g.</li>
+          <li><strong>Different units stay on separate lines.</strong> "200g flour" and "2 cups flour" aren't combined, because converting between them properly is something the app doesn't do yet — and an invented total is worse than two honest lines.</li>
+          <li>Ticks stay put as you shop, and survive closing the app.</li>
+        </ul>
+      </section>
+
+      <!-- ORGANIZING -->
+      <section class="legal-section" id="organizing">
+        <h2>Organizing</h2>
+
+        <figure class="guide-figure guide-figure--right">
+          <img class="shot" src="assets/shots/collections.png" alt="Collections of recipes" loading="lazy" />
+        </figure>
+
+        <h3>Collections</h3>
+        <p>Collections are named groups — "Weeknight dinners", "Christmas", "Things the kids will actually eat". A recipe can be in as many as you like. Add one from a recipe's own page using the folder button, or create collections from the <strong>Collections</strong> tab.</p>
+        <p>Deleting a collection never deletes the recipes inside it.</p>
+
+        <h3>Favorites</h3>
+        <p>Tap the heart on any recipe. Once you've hearted something, a <strong>Favorites</strong> filter appears on My Recipes and a Favorites group appears at the top of Collections. It can't be renamed or deleted — unheart a recipe to take it out.</p>
+
+        <h3>Meal types and searching</h3>
+        <p>Give a recipe a type — breakfast, dinner, dessert, baking, and so on — and it gets a matching icon and a filter chip. Only types you've actually used are offered, so the row stays short.</p>
+        <p><strong>Search looks at ingredients as well as titles</strong>, so searching "chorizo" finds the recipes that use it even when it isn't in the name. Search and the type filters work together.</p>
+
+        <h3>Notes</h3>
+        <p>Every recipe has a notes field for the things you'd otherwise scribble in a margin — "needed 10 minutes longer", "use half the sugar". Notes are yours alone and never travel with a shared recipe.</p>
+      </section>
+
+      <!-- SHARING -->
+      <section class="legal-section" id="sharing">
+        <h2>Sharing a recipe</h2>
+        <p>Open a recipe and tap the share icon in the top bar to send it through your phone's usual share sheet — a message, an email, whatever you normally use. <strong>Nothing is uploaded and no file is created.</strong> The message is written on your phone and handed straight to the app you pick.</p>
+        <p>What gets sent depends on where the recipe came from:</p>
+        <div class="legal-table">
+          <table>
+            <thead>
+              <tr><th>Recipe</th><th>What's sent</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>One you wrote yourself</td><td>The full recipe as plain text</td></tr>
+              <tr><td>One you imported</td><td>The title and a link to the original</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>That second row is deliberate. If someone else wrote the recipe, the fair thing is to point at their page rather than retype their words into a message — so credit stays where it belongs.</p>
+        <p>It's sent as ordinary text, so whoever receives it can just read it, with or without the app. If they do have Damson Kitchen, the message is laid out so it imports cleanly.</p>
+      </section>
+
+      <!-- BACKUP -->
+      <section class="legal-section" id="backup">
+        <h2>Backups and moving to a new phone</h2>
+        <p>Because your recipes live on your phone rather than on our servers, keeping a backup is worth a minute of your time — and it's the same feature that moves everything to a new phone.</p>
+
+        <h3>Export</h3>
+        <p>Go to <strong>Settings &rarr; Data &amp; Backup &rarr; Export My Data</strong>. The app bundles every recipe, collection, note, planned meal, and photo into a single file and hands it to your share sheet. Send it wherever you like — a cloud drive, an email to yourself, another device.</p>
+        <p><strong>We never receive that file.</strong> It's created on your phone and goes only where you send it.</p>
+
+        <h3>Import</h3>
+        <p>On the new phone, install the app and choose <strong>Settings &rarr; Data &amp; Backup &rarr; Import</strong>, then pick the file. You'll be asked how to handle it:</p>
+        <ul class="legal-steps">
+          <li><strong>Merge</strong> adds everything from the file alongside what's already there. This is the safe choice and the one offered first.</li>
+          <li><strong>Replace</strong> clears the recipes on this phone first. Use it when you're setting up a new phone and want an exact copy.</li>
+        </ul>
+        <p>A backup made by an older version of the app will always still import.</p>
+        <p>Your appearance and week-start choices aren't in the file — a backup carries your recipes, not the settings of the phone it came from.</p>
+      </section>
+
+      <!-- SETTINGS -->
+      <section class="legal-section" id="settings">
+        <h2>Settings</h2>
+        <ul class="legal-steps">
+          <li><strong>Appearance</strong> — Light, Dark, or System. System follows whatever your phone is doing, including its schedule.</li>
+          <li><strong>Week starts on</strong> — Monday or Sunday, whichever you think in. The planner re-frames the week you're looking at rather than jumping you elsewhere.</li>
+        </ul>
+      </section>
+
+      <!-- TROUBLESHOOTING -->
+      <section class="legal-section" id="trouble">
+        <h2>Troubleshooting</h2>
+
+        <h3>An import came back mostly empty</h3>
+        <p>Some pages don't publish their recipe in a way any app can read, and a few block automated readers entirely. The fix is usually to copy the recipe text yourself: select it, copy, then use the <strong>clipboard icon</strong> on My Recipes and paste. That path works on anything you can select.</p>
+
+        <h3>Sharing from TikTok only gives the video link</h3>
+        <p>TikTok shares the link without the caption, and the recipe is in the caption. Copy the caption text, then paste it using the clipboard icon. The app will tell you when it spots this and point you the same way.</p>
+
+        <h3>Instagram gave nothing back</h3>
+        <p>Instagram sometimes serves a sign-in page instead of the post. Waiting a moment and trying again often works; failing that, copy the caption and paste it.</p>
+
+        <h3>A recipe's photo has gone</h3>
+        <p>Photos are files on your phone, so a phone-cleaning app or a manual clear-out can remove them. The recipe itself is unaffected — it falls back to its meal-type icon or its initial, and you can add a new photo any time. This is a good argument for an occasional Export.</p>
+
+        <h3>An amount didn't scale</h3>
+        <p>Only amounts the app could read get scaled. "A few sprigs of thyme" has no number to multiply, so it's shown exactly as you wrote it. If a line should have been understood, tap the grey interpretation beneath it in the editor and correct it.</p>
+
+        <h3>Ingredients ended up as a method step, or a heading became an ingredient</h3>
+        <p>Import works from the shape of the text, and some pages are genuinely ambiguous. Everything is editable after import — tap <strong>Edit</strong> and move the line where it belongs.</p>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="legal-section" id="contact">
+        <h2>Still stuck?</h2>
+        <p>We'd rather hear about it than have you struggle. In the app, open <strong>Settings &rarr; Get Support</strong> — it starts an email with your app version and phone model already filled in, which usually saves a round of questions. Those details are in the body of the message, so you can read them and delete anything you'd rather not send.</p>
+        <div class="legal-contact">
+          <p><strong>Email:</strong> <a href="mailto:hello@damsonkitchen.com">hello@damsonkitchen.com</a></p>
+        </div>
+        <p>If something's wrong with an import, telling us the page you were importing from helps enormously — it's usually the fastest route to a fix that helps everyone.</p>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="/" class="nav__logo">
+          <svg class="brandmark" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><g transform="translate(16,16) scale(0.28) translate(-53,-51)"><path d="M50 30C50.5 24 51 20 52 15" stroke="#F6F1ED" stroke-width="4.5" stroke-linecap="round" fill="none"/><ellipse cx="50" cy="59" rx="30" ry="31" fill="#F6F1ED"/><path d="M50 31C43.5 45 43.5 73 49 86" stroke="#833060" stroke-width="3.5" stroke-linecap="round" fill="none" opacity=".34"/><path d="M53 28C62 16 78 12 86 17 79 26 64 31 53 28Z" fill="#C9A868"/></g></svg>
+          <span class="nav__logo-text">Damson <em>Kitchen</em></span>
+        </a>
+        <p>Save your favorite recipes in one place.</p>
+      </div>
+      <div class="footer__links">
+        <div class="footer__col">
+          <h4>Product</h4>
+          <a href="/#features">Features</a>
+          <a href="/#how-it-works">How It Works</a>
+          <a href="/#download">Download</a>
+        </div>
+        <div class="footer__col">
+          <h4>Support</h4>
+          <a href="help.html" aria-current="page">Guides &amp; Help</a>
+          <a href="mailto:hello@damsonkitchen.com">Contact</a>
+        </div>
+        <div class="footer__col">
+          <h4>Legal</h4>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Service</a>
+          <a href="delete-account.html">Delete Account</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom container">
+      <p>&copy; 2026 Damson Kitchen. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

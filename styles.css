@@ -976,3 +976,92 @@ body {
   .cookie-banner { flex-direction: column; align-items: flex-start; }
   .cookie-banner__actions { align-self: flex-end; }
 }
+
+/* ==========================================================================
+   GUIDES (help.html)
+   Reuses the legal-* page furniture — hero, container, sections, steps, table
+   — so a guide reads as the same kind of document as the policies. Only the
+   two things those pages have no equivalent for are defined here: the index of
+   guides at the top, and a screenshot sitting beside body copy.
+   ========================================================================== */
+
+/* Jump list at the top of the page. Cards rather than a bulleted list of
+   links, because this is the first thing someone sees when they arrive from
+   Settings and it has to look like a set of destinations. */
+.guide-index {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+  margin-bottom: 56px;
+}
+
+.guide-card {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px 18px;
+  border: 1px solid var(--ink-10);
+  border-radius: var(--radius-md);
+  background: var(--white);
+  text-decoration: none;
+  transition: border-color var(--transition), box-shadow var(--transition),
+    transform var(--transition);
+}
+
+.guide-card:hover,
+.guide-card:focus-visible {
+  border-color: var(--damson);
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-2px);
+}
+
+/* The one place damson appears in the guides — the hue stays rationed, as it
+   is in the app and on the marketing page. Section headings sit in --ink. */
+.guide-card__title {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--damson);
+}
+
+.guide-card__desc {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ink-60);
+}
+
+/* A phone screenshot alongside the text it illustrates. Capped narrow: these
+   are 1080x1920, and at any real width they would tower over the paragraph
+   they belong to. */
+.guide-figure {
+  margin: 0 0 20px 0;
+  max-width: 210px;
+}
+
+.guide-figure .shot {
+  width: 100%;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+}
+
+.guide-figure--right {
+  float: right;
+  margin-left: 32px;
+}
+
+/* Keep a float inside its own section rather than letting it hang into the
+   next heading. */
+.legal-section::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+/* Floating a 210px image beside prose stops working once the column is narrow
+   — below this the screenshot goes back in the flow and centers. */
+@media (max-width: 700px) {
+  .guide-figure--right {
+    float: none;
+    margin: 0 auto 24px auto;
+  }
+}

@@ -11,6 +11,7 @@ Static marketing and legal website for the Damson Kitchen recipe app. No build s
 | File | Role |
 |------|------|
 | `index.html` | Main marketing page — hero, features, philosophy, how-it-works, download CTA |
+| `help.html` | **Guides & Help** — the app's own Settings → Guides & Help opens this. One page, anchored sections, indexed by `.guide-index` at the top |
 | `privacy.html` | Privacy Policy (UK GDPR + CCPA) |
 | `terms.html` | Terms of Service |
 | `delete-account.html` | Data deletion instructions (required by app stores) |
@@ -20,7 +21,8 @@ Static marketing and legal website for the Damson Kitchen recipe app. No build s
 | `robots.txt` | Allows all crawlers; points to sitemap |
 | `sitemap.xml` | Lists all public pages — update `lastmod` and add `<url>` entries whenever pages change |
 | `assets/favicon.svg` | The plum mark. Inline SVG, no PNG fallback |
-| `assets/screenshot.png` | **Stale** — still shows the pre-rename app in the old coral palette |
+| `assets/og-image.png` | Link-preview image (`og:image`, `twitter:image`, and the JSON-LD `screenshot`). The Play feature graphic, so it is already 1024×500 landscape |
+| `assets/shots/*.png` | Real phone screenshots of the current app — used by the hero `.shot-stack`, the gallery strip, and `help.html`'s `.guide-figure` |
 
 ## Brand tokens (styles.css)
 
@@ -120,9 +122,11 @@ Features that do NOT exist (do not add to marketing copy):
 - Cloud sync of any kind
 - A recipe description field — deliberately retired from the product
 
-## Legal pages — placeholders
+## Legal pages
 
-`privacy.html` and `terms.html` still contain `[Your Legal Entity Name]`, `[Registered Address]`, and `[Your State]` placeholders. **These must be filled in before the Play Store listing can be published** — Google requires a working privacy policy URL, and a policy naming a placeholder entity is not one.
+The `[Your Legal Entity Name]` / `[Registered Address]` / `[Your State]` placeholders are **filled in** — the pages now name an independent UK individual developer trading as Damson Kitchen, with no company behind it, contactable at `hello@damsonkitchen.com`. Google requires a working privacy policy URL and would not accept one naming a placeholder entity, so this had to be settled before the listing.
+
+**A registered address becomes unavoidable at monetisation, not before.** Trader status under the EU DSA is what forces a published name and address, and it is triggered by charging — so the current free, purchase-free app can be declared non-trader. The moment the one-off unlock ships, that changes and the address goes on the listing. Worth arranging a registered-office or virtual address before building the billing flow rather than at the point of shipping it.
 
 ## Launch state
 
@@ -153,9 +157,10 @@ Three things about the snippet are load-bearing and easy to break by pasting Goo
 
 ## Known stale items
 
-- **`assets/screenshot.png`** shows the old app in the old palette. It's the `og:image` and the hero phone mock, so it's the first thing a link preview shows.
-- **`assets/screenshot.png`** shows the old app in the old palette. It's the `og:image` and the hero phone mock, so it's the first thing a link preview shows.
 - **`abf9c62de6f546c3b885254be5a901a2.txt`** is a site-verification file for the old domain and is almost certainly dead weight now.
+- **`help.html` describes the app as it stands.** It is the one page that goes stale with a *feature* change rather than a copy change — the app links straight to it from Settings, so a guide describing something that moved is worse than no guide. Check it whenever a screen changes shape.
+
+The two duplicated `assets/screenshot.png` entries that used to sit here are gone: that file was deleted when the real screenshots landed in `assets/shots/`, and `og:image` now points at `assets/og-image.png`.
 
 ## Deployment
 
