@@ -347,6 +347,17 @@ body {
   gap: 32px;
 }
 
+/* With ten cards the last row holds one, and a lone card hard against the left
+   edge reads as a layout that ran out rather than a set that finished. Centering
+   it only fires when it really is alone (10th of three-wide is 3n+1), and only
+   above 900px where the grid is three columns — below that the card counts work
+   out even, and column 2 would not exist at the one-column breakpoint. */
+@media (min-width: 901px) {
+  .features__grid > .feature-card:last-child:nth-child(3n + 1) {
+    grid-column: 2;
+  }
+}
+
 .feature-card {
   background: var(--stone);
   border-radius: var(--radius-lg);
