@@ -22,6 +22,7 @@ Static marketing and legal website for the Damson Kitchen recipe app. No build s
 | `sitemap.xml` | Lists all public pages — update `lastmod` and add `<url>` entries whenever pages change |
 | `assets/favicon.svg` | The plum mark. Inline SVG, no PNG fallback |
 | `assets/og-image.png` | Link-preview image (`og:image`, `twitter:image`, and the JSON-LD `screenshot`). The Play feature graphic, so it is already 1024×500 landscape |
+| `es/*.html` | The Spanish site: a twin of every page above, in the Spanish of Spain. See "The Spanish site" |
 | `assets/shots/*.png` | Real phone screenshots of the current app — used by the hero `.shot-stack`, the gallery strip, and `help.html`'s `.guide-figure` |
 
 ## Brand tokens (styles.css)
@@ -161,6 +162,18 @@ The privacy policy and terms were cut to about a page each on 2026-09-28, becaus
 - **`help.html` describes the app as it stands.** It is the one page that goes stale with a *feature* change rather than a copy change — the app links straight to it from Settings, so a guide describing something that moved is worse than no guide. Check it whenever a screen changes shape.
 
 The two duplicated `assets/screenshot.png` entries that used to sit here are gone: that file was deleted when the real screenshots landed in `assets/shots/`, and `og:image` now points at `assets/og-image.png`.
+
+## The Spanish site
+
+`es/` holds a Spanish twin of every page — `index`, `help`, `privacy`, `terms`, `delete-account`. It went up with the app release that translated the app's own screens; before that the site only said the app *read* Spanish recipes.
+
+- **Every page names its twin**: `hreflang` alternates (`en`, `es`, and `x-default` → English) in the head, a language link before the nav button, and one in the footer's bottom line. `sitemap.xml` lists both with `xhtml:link` alternates. Add a page, add its twin to all four.
+- **`es/` pages reference shared files with `../`** (`../styles.css`, `../assets/…`, `../script.js`); links between Spanish pages stay relative, links to the home sections are absolute (`/es/#features`).
+- **`help.html`'s anchors are the same in both** (`#adding`, `#cooking`, …) and must never be translated: the app deep-links to them, and opens `/es/help.html` when it is shown in Spanish.
+- **The cookie banner follows `<html lang>`** in `script.js` — Spanish words and `/es/privacy.html#cookies` on the Spanish pages.
+- **The legal pages are translations, and say so**: each opens with a note that the English version prevails, *without affecting consumer-law rights* — a consumer's local protections can't be signed away by a language clause. Both language versions now name EU users and the Spanish data authority (AEPD) beside the UK and the ICO, and Spain's age of digital consent (14). **Neither has been reviewed by a lawyer.**
+- **Screenshots are still the English app.** Spanish ones would be better on the Spanish pages and in the Spanish Play listing.
+- Tone is Spain's Spanish with the informal "tú", matching the app. Guillemets («») rather than curly quotes, as Spanish typography prefers.
 
 ## Deployment
 

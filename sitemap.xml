@@ -1,32 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://damsonkitchen.com/</loc>
-    <lastmod>2026-09-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://damsonkitchen.com/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://damsonkitchen.com/es/" />
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://damsonkitchen.com/es/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://damsonkitchen.com/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://damsonkitchen.com/es/" />
+    <lastmod>2026-09-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://damsonkitchen.com/help.html</loc>
-    <lastmod>2026-09-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://damsonkitchen.com/help.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://damsonkitchen.com/es/help.html" />
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://damsonkitchen.com/es/help.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://damsonkitchen.com/help.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://damsonkitchen.com/es/help.html" />
+    <lastmod>2026-09-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://damsonkitchen.com/privacy.html</loc>
-    <lastmod>2026-08-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://damsonkitchen.com/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://damsonkitchen.com/es/privacy.html" />
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://damsonkitchen.com/es/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://damsonkitchen.com/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://damsonkitchen.com/es/privacy.html" />
+    <lastmod>2026-09-28</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://damsonkitchen.com/terms.html</loc>
-    <lastmod>2026-08-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://damsonkitchen.com/terms.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://damsonkitchen.com/es/terms.html" />
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://damsonkitchen.com/es/terms.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://damsonkitchen.com/terms.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://damsonkitchen.com/es/terms.html" />
+    <lastmod>2026-09-28</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://damsonkitchen.com/delete-account.html</loc>
-    <lastmod>2026-08-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://damsonkitchen.com/delete-account.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://damsonkitchen.com/es/delete-account.html" />
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  <url>
+    <loc>https://damsonkitchen.com/es/delete-account.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://damsonkitchen.com/delete-account.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://damsonkitchen.com/es/delete-account.html" />
+    <lastmod>2026-09-28</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
   </url>
