@@ -165,13 +165,12 @@ The two duplicated `assets/screenshot.png` entries that used to sit here are gon
 
 ## The Spanish site
 
-`es/` holds a Spanish twin of every page — `index`, `help`, `privacy`, `terms`, `delete-account`. It went up with the app release that translated the app's own screens; before that the site only said the app *read* Spanish recipes.
+`es/` holds a Spanish twin of every page — `index`, `help`, `privacy`, `terms`, and the `delete-account` redirect. It went up with the app release that translated the app's own screens; before that the site only said the app *read* Spanish recipes.
 
 - **Every page names its twin**: `hreflang` alternates (`en`, `es`, and `x-default` → English) in the head, a language link before the nav button, and one in the footer's bottom line. `sitemap.xml` lists both with `xhtml:link` alternates. Add a page, add its twin to all four.
 - **`es/` pages reference shared files with `../`** (`../styles.css`, `../assets/…`, `../script.js`); links between Spanish pages stay relative, links to the home sections are absolute (`/es/#features`).
 - **`help.html`'s anchors are the same in both** (`#adding`, `#cooking`, …) and must never be translated: the app deep-links to them, and opens `/es/help.html` when it is shown in Spanish.
-- **The cookie banner follows `<html lang>`** in `script.js` — Spanish words and `/es/privacy.html#cookies` on the Spanish pages.
-- **The legal pages are translations, and say so**: each opens with a note that the English version prevails, *without affecting consumer-law rights* — a consumer's local protections can't be signed away by a language clause. Both language versions now name EU users and the Spanish data authority (AEPD) beside the UK and the ICO, and Spain's age of digital consent (14). **Neither has been reviewed by a lawyer.**
+- **The legal pages are short translations, and say so**: each notes that the English version prevails, *without affecting consumer-law rights*. Both languages name the ICO and the AEPD. `es/delete-account.html` is a redirect, like its English twin, and neither is in the sitemap. **Not reviewed by a lawyer.**
 - **Screenshots are still the English app.** Spanish ones would be better on the Spanish pages and in the Spanish Play listing.
 - Tone is Spain's Spanish with the informal "tú", matching the app. Guillemets («») rather than curly quotes, as Spanish typography prefers.
 

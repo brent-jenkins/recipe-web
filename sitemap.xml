@@ -65,20 +65,4 @@
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
-  <url>
-    <loc>https://damsonkitchen.com/delete-account.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://damsonkitchen.com/delete-account.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://damsonkitchen.com/es/delete-account.html" />
-    <lastmod>2026-09-28</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  <url>
-    <loc>https://damsonkitchen.com/es/delete-account.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://damsonkitchen.com/delete-account.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://damsonkitchen.com/es/delete-account.html" />
-    <lastmod>2026-09-28</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.2</priority>
-  </url>
 </urlset>
