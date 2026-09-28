@@ -171,7 +171,7 @@ The two duplicated `assets/screenshot.png` entries that used to sit here are gon
 - **`es/` pages reference shared files with `../`** (`../styles.css`, `../assets/…`, `../script.js`); links between Spanish pages stay relative, links to the home sections are absolute (`/es/#features`).
 - **`help.html`'s anchors are the same in both** (`#adding`, `#cooking`, …) and must never be translated: the app deep-links to them, and opens `/es/help.html` when it is shown in Spanish.
 - **The legal pages are short translations, and say so**: each notes that the English version prevails, *without affecting consumer-law rights*. Both languages name the ICO and the AEPD. `es/delete-account.html` is a redirect, like its English twin, and neither is in the sitemap. **Not reviewed by a lawyer.**
-- **Screenshots are still the English app.** Spanish ones would be better on the Spanish pages and in the Spanish Play listing.
+- **Spanish pages use `assets/shots-es/`** — the Spanish app with the Spanish demo library, same filenames and 720×1280 palette PNGs as `assets/shots/`. They are scaled from the app repo's `store/Phone-es/`, which is how to regenerate them.
 - Tone is Spain's Spanish with the informal "tú", matching the app. Guillemets («») rather than curly quotes, as Spanish typography prefers.
 
 ## Deployment
