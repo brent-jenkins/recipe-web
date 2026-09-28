@@ -15,6 +15,25 @@
    over-saturation is what made the previous coral-on-cream look dated.
    ============================================================ */
 
+/* Fonts are served from this site, not from Google Fonts, so a visit sends
+   nothing to a third party. Both are variable fonts covering every weight the
+   site uses; the Latin subset includes Spanish (á ñ ¿ ¡) and the euro sign.
+   Both are under the SIL Open Font License. */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300 600;
+  font-display: swap;
+  src: url('assets/fonts/inter-latin.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('assets/fonts/playfair-display-latin.woff2') format('woff2');
+}
+
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
@@ -932,73 +951,6 @@ body {
 @media (max-width: 600px) {
   .legal-table { font-size: 13px; }
   .legal-table th, .legal-table td { padding: 10px 12px; }
-}
-
-/* ============================================================
-   COOKIE CONSENT BANNER
-   ============================================================ */
-
-.cookie-banner {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: var(--ink);
-  color: rgba(255,255,255,.88);
-  padding: 16px 24px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  z-index: 9999;
-  transform: translateY(100%);
-  transition: transform 0.3s ease;
-  font-family: var(--font-body);
-  font-size: 14px;
-  line-height: 1.5;
-}
-
-.cookie-banner.visible { transform: translateY(0); }
-
-.cookie-banner__text { flex: 1; }
-.cookie-banner__text a { color: var(--brass); text-underline-offset: 3px; }
-.cookie-banner__text a:hover { color: #fff; }
-
-.cookie-banner__actions {
-  display: flex;
-  gap: 10px;
-  flex-shrink: 0;
-}
-
-.cookie-banner__btn {
-  padding: 8px 20px;
-  border-radius: var(--radius-xl);
-  font-family: var(--font-body);
-  font-size: 13px;
-  font-weight: 600;
-  cursor: pointer;
-  border: 2px solid transparent;
-  transition: background var(--transition), color var(--transition), border-color var(--transition);
-  white-space: nowrap;
-}
-
-.cookie-banner__btn--primary {
-  background: var(--damson);
-  color: #fff;
-  border-color: var(--damson);
-}
-.cookie-banner__btn--primary:hover { background: var(--damson-dk); border-color: var(--damson-dk); }
-
-.cookie-banner__btn--ghost {
-  background: transparent;
-  color: rgba(255,255,255,.7);
-  border-color: rgba(255,255,255,.3);
-}
-.cookie-banner__btn--ghost:hover { color: #fff; border-color: rgba(255,255,255,.6); }
-
-@media (max-width: 560px) {
-  .cookie-banner { flex-direction: column; align-items: flex-start; }
-  .cookie-banner__actions { align-self: flex-end; }
 }
 
 /* ==========================================================================

@@ -14,9 +14,9 @@ Static marketing and legal website for the Damson Kitchen recipe app. No build s
 | `help.html` | **Guides & Help** — the app's own Settings → Guides & Help opens this. One page, anchored sections, indexed by `.guide-index` at the top |
 | `privacy.html` | Privacy Policy (UK GDPR + CCPA) |
 | `terms.html` | Terms of Service |
-| `delete-account.html` | Data deletion instructions (required by app stores) |
+| `delete-account.html` | A redirect to `privacy.html#your-data`, kept only so old links work. There are no accounts, so Play asks for no deletion URL |
 | `styles.css` | All styles — BEM-ish classes, CSS custom properties for brand tokens |
-| `script.js` | Mobile nav toggle, scroll fade-in animations, cookie-consent banner |
+| `script.js` | Mobile nav toggle and scroll fade-in animations |
 | `CNAME` | Custom domain: `damsonkitchen.com` |
 | `robots.txt` | Allows all crawlers; points to sitemap |
 | `sitemap.xml` | Lists all public pages — update `lastmod` and add `<url>` entries whenever pages change |
@@ -39,7 +39,7 @@ The primary and accent are the app's *exact* values so site and app read as one 
 
 **Ration the hue**, as the app does: filled buttons and eyebrows carry damson, body copy sits in `--ink-60`. Damson on every heading is the over-saturation that made the previous coral-on-cream look dated.
 
-Fonts: `Playfair Display` (headings) and `Inter` (body), from Google Fonts.
+Fonts: `Playfair Display` (headings) and `Inter` (body), **self-hosted** in `assets/fonts/` as variable Latin-subset woff2 files declared at the top of `styles.css` (SIL Open Font License). Don't go back to `fonts.googleapis.com`: it sends every visitor's IP address to Google, which the privacy policy says doesn't happen.
 
 ## The wordmark is text, not an image
 
@@ -145,15 +145,15 @@ When the app moves to open / public release, update:
 - Both badge links → the Play Store URL above
 - iOS is not yet available (no Apple Developer account); add the App Store badge once live
 
-## Analytics and the cookie banner
+## No analytics, no cookies, no third parties
 
-The site runs **Google Analytics 4, property `G-1540ELSDKP`** — the Damson Kitchen property. The legacy `G-7WECL7NJNR` belonged to Zayvori and is gone.
+**Google Analytics was removed on 2026-09-28**, along with the cookie banner and Google Fonts. The site now makes no third-party requests at all, which is what lets the privacy policy say so in one line — and what keeps the whole legal footprint small: no consent mechanism, no transfer of visitor data to the US, and processing occasional enough (support email only) that an EU GDPR representative is unlikely to be needed.
 
-Three things about the snippet are load-bearing and easy to break by pasting Google's default over it:
+**Adding any tracker, embed, or externally hosted asset changes the privacy policy**, and probably brings back a consent banner. Weigh that before adding one; Play Console's own install and listing-visit figures cover the numbers that matter.
 
-1. **`gtag('consent', 'default', {'analytics_storage': 'denied'})` must run *above* the `gtag.js` script tag.** Google's own copy-paste snippet omits it. Without it, GA sets cookies on page load — before the visitor has touched the banner — which contradicts what `privacy.html` promises and what UK GDPR / PECR require. `script.js` flips it to `'granted'` on accept.
-2. **The consent block sits *below* `<meta charset>`, not immediately after `<head>`.** Browsers sniff only the first 1024 bytes for the charset; the snippet is ~900 bytes, so pasting it first pushes charset to the edge of that window and risks the page's em-dashes rendering as mojibake.
-3. **`script.js`'s banner is gated on `typeof gtag === 'function'`.** That is what lets the tag be removed cleanly — no tag means no banner and no cookie, rather than a `ReferenceError` that halts the script and takes the mobile nav and scroll animations with it. Keep the guard.
+## Legal pages are deliberately minimal
+
+The privacy policy and terms were cut to about a page each on 2026-09-28, because the app collects nothing. The privacy policy is required by Google Play for every app; the terms are not required by law, and keep only what does real work: *we can't recover your recipes, so back up*, *imported recipes belong to their authors*, *backup files are for your own use*, and *your consumer rights are unaffected*. Keep them short — every added clause is something to translate and have reviewed.
 
 ## Known stale items
 
