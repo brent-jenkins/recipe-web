@@ -191,6 +191,8 @@ body {
   transition: color var(--transition);
 }
 .nav__links a:not(.btn):hover { color: var(--damson); }
+/* `.nav__links a` sets ink and outranks `.btn--primary`; the filled button needs its white back. */
+.nav__links a.btn--primary { color: var(--white); }
 
 /* The language switch lives outside .nav__links so it stays visible on phones,
    where the menu collapses — a switch hidden behind the hamburger is one the
