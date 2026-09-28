@@ -3,6 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Send a Spanish-speaking visitor to the Spanish page, but only on arrival from
+       outside the site: moving around it (including clicking "English" on a Spanish
+       page) is always respected, and ?lang=en forces English. Nothing is stored. -->
+  <script>
+    (function () {
+      try {
+        if (document.referrer.indexOf(location.origin) === 0) return;
+        if (/[?&]lang=en(&|$)/.test(location.search)) return;
+        var first = ((navigator.languages && navigator.languages[0]) || navigator.language || '').toLowerCase();
+        if (first.slice(0, 2) !== 'es') return;
+        var path = location.pathname === '/' || location.pathname === '/index.html' ? '/' : location.pathname;
+        location.replace('/es' + path + location.hash);
+      } catch (e) {}
+    })();
+  </script>
   <meta name="description" content="Damson Kitchen — your own private recipe book. Import recipes, plan the week, and build a shopping list. Everything stays on your phone." />
   <link rel="canonical" href="https://damsonkitchen.com/" />
   <link rel="alternate" hreflang="en" href="https://damsonkitchen.com/" />

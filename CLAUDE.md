@@ -167,6 +167,7 @@ The two duplicated `assets/screenshot.png` entries that used to sit here are gon
 
 `es/` holds a Spanish twin of every page — `index`, `help`, `privacy`, `terms`, and the `delete-account` redirect. It went up with the app release that translated the app's own screens; before that the site only said the app *read* Spanish recipes.
 
+- **Spanish-speaking visitors are redirected on arrival**, by a small inline script in the head of the English pages: only when the browser's *first* language is Spanish, only when arriving from outside the site (so clicking "English" is always respected), and never with `?lang=en`. It reads the referrer rather than storing a choice, so the privacy policy's no-cookies/no-storage line stays true. Googlebot crawls in English and is never redirected; the hreflang tags do the search-side work.
 - **Every page names its twin**: `hreflang` alternates (`en`, `es`, and `x-default` → English) in the head, a language link before the nav button, and one in the footer's bottom line. `sitemap.xml` lists both with `xhtml:link` alternates. Add a page, add its twin to all four.
 - **`es/` pages reference shared files with `../`** (`../styles.css`, `../assets/…`, `../script.js`); links between Spanish pages stay relative, links to the home sections are absolute (`/es/#features`).
 - **`help.html`'s anchors are the same in both** (`#adding`, `#cooking`, …) and must never be translated: the app deep-links to them, and opens `/es/help.html` when it is shown in Spanish.
