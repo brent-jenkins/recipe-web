@@ -116,8 +116,11 @@ body {
   max-width: 600px;
   margin: 0 auto 64px;
 }
-.section-header--light h2,
-.section-header--light p { color: var(--white); }
+/* Doubled class so it outranks `.section-header h2` below, which sets ink. With
+   equal specificity the later rule won, and the heading on the dark band rendered
+   ink on plum-deep — 1:1, invisible. */
+.section-header.section-header--light h2,
+.section-header.section-header--light p { color: var(--white); }
 
 .section-eyebrow {
   display: inline-block;
@@ -526,8 +529,8 @@ body {
   font-family: var(--font-heading);
   font-size: 56px;
   font-weight: 700;
-  color: var(--damson);
-  opacity: .9;
+  /* Brass, the accent for dark grounds: damson on plum-deep was 1.7:1. */
+  color: var(--brass);
   line-height: 1;
   margin-bottom: 16px;
 }
@@ -539,7 +542,7 @@ body {
   color: var(--white);
   margin-bottom: 10px;
 }
-.step__content p { font-size: 15px; color: rgba(246,241,237,.7); line-height: 1.65; }
+.step__content p { font-size: 15px; color: rgba(246,241,237,.85); line-height: 1.65; }
 
 .step__connector {
   width: 60px;
@@ -747,7 +750,7 @@ body {
 
 .footer__brand p {
   font-size: 14px;
-  color: rgba(246,241,237,.5);
+  color: rgba(246,241,237,.62);
   max-width: 220px;
   line-height: 1.6;
 }
@@ -768,7 +771,7 @@ body {
   font-weight: 600;
   letter-spacing: .1em;
   text-transform: uppercase;
-  color: rgba(246,241,237,.5);
+  color: rgba(246,241,237,.62);
   margin-bottom: 4px;
 }
 
@@ -778,14 +781,15 @@ body {
   text-decoration: none;
   transition: color var(--transition);
 }
-.footer__col a:hover { color: var(--damson); }
+/* Stone, not damson: damson on plum-deep is 1.7:1, so a link vanished on hover. */
+.footer__col a:hover { color: var(--stone); }
 
 .footer__bottom {
   padding: 20px 24px;
 }
 .footer__bottom p {
   font-size: 13px;
-  color: rgba(246,241,237,.35);
+  color: rgba(246,241,237,.62);
 }
 .footer__bottom a {
   color: rgba(246,241,237,.7);
