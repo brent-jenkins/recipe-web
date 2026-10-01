@@ -196,26 +196,59 @@ body {
 
 /* The language switch lives outside .nav__links so it stays visible on phones,
    where the menu collapses — a switch hidden behind the hamburger is one the
-   person who needs it may never find. It names the *other* language, so with
-   two languages it is one tap; a dropdown earns its place at three. */
+   person who needs it may never find. At three languages it became a dropdown:
+   a <details>, so it opens with no script at all (script.js only closes it on an
+   outside tap or Escape). The pill shows the current language's code; the menu
+   names each language in itself, because the person hunting for theirs may not
+   read the one on screen. */
 .nav__links { margin-left: auto; }
-.nav__lang-toggle {
+.nav__lang { position: relative; margin-left: 24px; }
+.nav__lang > summary {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  margin-left: 24px;
-  padding: 6px 12px;
+  padding: 6px 10px 6px 12px;
   border: 1.5px solid rgba(131,48,96,.25);
   border-radius: 999px;
   font-size: 13px;
   font-weight: 600;
   letter-spacing: .06em;
   color: var(--damson);
-  text-decoration: none;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
   transition: background var(--transition), border-color var(--transition);
 }
-.nav__lang-toggle svg { width: 16px; height: 16px; }
-.nav__lang-toggle:hover { background: rgba(131,48,96,.08); border-color: var(--damson); }
+.nav__lang > summary::-webkit-details-marker { display: none; }
+.nav__lang > summary svg { width: 16px; height: 16px; }
+.nav__lang > summary .nav__lang-caret { width: 14px; height: 14px; transition: transform var(--transition); }
+.nav__lang[open] > summary .nav__lang-caret { transform: rotate(180deg); }
+.nav__lang > summary:hover,
+.nav__lang[open] > summary { background: rgba(131,48,96,.08); border-color: var(--damson); }
+.nav__lang-menu {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 8px);
+  min-width: 170px;
+  margin: 0;
+  padding: 6px;
+  list-style: none;
+  background: var(--white);
+  border: 1px solid rgba(131,48,96,.15);
+  border-radius: 12px;
+  box-shadow: 0 12px 32px rgba(42,36,33,.14);
+  z-index: 120;
+}
+.nav__lang-menu a {
+  display: block;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 15px;
+  color: var(--ink);
+  text-decoration: none;
+}
+.nav__lang-menu a:hover { background: rgba(131,48,96,.08); }
+.nav__lang-menu a[aria-current] { color: var(--damson); font-weight: 600; }
 
 .nav__hamburger {
   display: none;
@@ -826,7 +859,7 @@ body {
 @media (max-width: 600px) {
   .nav__links { display: none; }
   .nav__hamburger { display: flex; }
-  .nav__lang-toggle { margin-left: auto; margin-right: 14px; }
+  .nav__lang { margin-left: auto; margin-right: 14px; }
 
   .nav__links.open {
     display: flex;

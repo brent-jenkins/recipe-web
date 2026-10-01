@@ -5,7 +5,8 @@
     <loc>https://damsonkitchen.com/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://damsonkitchen.com/" />
     <xhtml:link rel="alternate" hreflang="es" href="https://damsonkitchen.com/es/" />
-    <lastmod>2026-09-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://damsonkitchen.com/pt/" />
+    <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -13,7 +14,17 @@
     <loc>https://damsonkitchen.com/es/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://damsonkitchen.com/" />
     <xhtml:link rel="alternate" hreflang="es" href="https://damsonkitchen.com/es/" />
-    <lastmod>2026-09-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://damsonkitchen.com/pt/" />
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://damsonkitchen.com/pt/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://damsonkitchen.com/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://damsonkitchen.com/es/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://damsonkitchen.com/pt/" />
+    <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -21,7 +32,8 @@
     <loc>https://damsonkitchen.com/help.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://damsonkitchen.com/help.html" />
     <xhtml:link rel="alternate" hreflang="es" href="https://damsonkitchen.com/es/help.html" />
-    <lastmod>2026-09-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://damsonkitchen.com/pt/help.html" />
+    <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -29,7 +41,17 @@
     <loc>https://damsonkitchen.com/es/help.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://damsonkitchen.com/help.html" />
     <xhtml:link rel="alternate" hreflang="es" href="https://damsonkitchen.com/es/help.html" />
-    <lastmod>2026-09-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://damsonkitchen.com/pt/help.html" />
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://damsonkitchen.com/pt/help.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://damsonkitchen.com/help.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://damsonkitchen.com/es/help.html" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://damsonkitchen.com/pt/help.html" />
+    <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -37,7 +59,8 @@
     <loc>https://damsonkitchen.com/privacy.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://damsonkitchen.com/privacy.html" />
     <xhtml:link rel="alternate" hreflang="es" href="https://damsonkitchen.com/es/privacy.html" />
-    <lastmod>2026-09-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://damsonkitchen.com/pt/privacy.html" />
+    <lastmod>2026-10-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -45,7 +68,17 @@
     <loc>https://damsonkitchen.com/es/privacy.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://damsonkitchen.com/privacy.html" />
     <xhtml:link rel="alternate" hreflang="es" href="https://damsonkitchen.com/es/privacy.html" />
-    <lastmod>2026-09-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://damsonkitchen.com/pt/privacy.html" />
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://damsonkitchen.com/pt/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://damsonkitchen.com/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://damsonkitchen.com/es/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://damsonkitchen.com/pt/privacy.html" />
+    <lastmod>2026-10-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -53,7 +86,8 @@
     <loc>https://damsonkitchen.com/terms.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://damsonkitchen.com/terms.html" />
     <xhtml:link rel="alternate" hreflang="es" href="https://damsonkitchen.com/es/terms.html" />
-    <lastmod>2026-09-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://damsonkitchen.com/pt/terms.html" />
+    <lastmod>2026-10-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -61,7 +95,17 @@
     <loc>https://damsonkitchen.com/es/terms.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://damsonkitchen.com/terms.html" />
     <xhtml:link rel="alternate" hreflang="es" href="https://damsonkitchen.com/es/terms.html" />
-    <lastmod>2026-09-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://damsonkitchen.com/pt/terms.html" />
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://damsonkitchen.com/pt/terms.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://damsonkitchen.com/terms.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://damsonkitchen.com/es/terms.html" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://damsonkitchen.com/pt/terms.html" />
+    <lastmod>2026-10-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>

@@ -26,7 +26,14 @@
         <a href="/es/#how-it-works">Cómo funciona</a>
         <a href="https://play.google.com/store/apps/details?id=com.damsonkitchen.app&amp;hl=es" class="btn btn--primary btn--sm" target="_blank" rel="noopener">Descargar</a>
       </nav>
-      <a href="/help.html" lang="en" hreflang="en" class="nav__lang-toggle" aria-label="View this page in English" title="View this page in English"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg><span>EN</span></a>
+      <details class="nav__lang">
+        <summary aria-label="Language / Idioma" title="Language / Idioma"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg><span>ES</span><svg class="nav__lang-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></summary>
+        <ul class="nav__lang-menu">
+          <li><a href="/help.html" lang="en" hreflang="en">English</a></li>
+          <li><a href="/es/help.html" lang="es" hreflang="es" aria-current="true">Español</a></li>
+          <li><a href="/pt/help.html" lang="pt" hreflang="pt">Português</a></li>
+        </ul>
+      </details>
       <button class="nav__hamburger" aria-label="Abrir menú">
         <span></span><span></span><span></span>
       </button>
@@ -117,7 +124,7 @@
         <p>El mismo recuadro admite una receta escrita desde cero, que a mucha gente le resulta más natural que rellenar un formulario. Escríbela como lo harías en papel (el título, luego los ingredientes y después la preparación) y toca <strong>Importar receta</strong>. Damson Kitchen pone cada cosa en su sitio.</p>
         <p>En ese recuadro hay dos cosas que ayudan a hacerlo bien:</p>
         <ul class="legal-steps">
-          <li><strong>Comprobar ingredientes y preparación</strong> añade los títulos <strong>INGREDIENTES</strong> y <strong>PREPARACIÓN</strong> donde cree que se divide la receta (o INGREDIENTS y METHOD si la receta está en inglés). No son decoración: esas palabras son exactamente lo que lee la aplicación al importar, así que, si un título está en el sitio equivocado, al moverlo se mueve la división. Vuelve a pulsar el botón después de un cambio y los títulos se moverán para ajustarse.</li>
+          <li><strong>Comprobar ingredientes y preparación</strong> añade los títulos <strong>INGREDIENTES</strong> y <strong>PREPARACIÓN</strong> donde cree que se divide la receta (o INGREDIENTS y METHOD si la receta está en inglés, e INGREDIENTES y MODO DE PREPARO si está en portugués). No son decoración: esas palabras son exactamente lo que lee la aplicación al importar, así que, si un título está en el sitio equivocado, al moverlo se mueve la división. Vuelve a pulsar el botón después de un cambio y los títulos se moverán para ajustarse.</li>
           <li><strong>Las flechas arriba y abajo</strong> mueven la línea en la que está el cursor, lo que te ahorra seleccionar, cortar y pegar para desplazar una línea: útil para un título que ha quedado una línea demasiado arriba o un ingrediente que ha acabado entre los pasos.</li>
         </ul>
 
@@ -180,7 +187,7 @@
           <li><strong>Empieza desde hoy, no desde el lunes.</strong> Lo que ya te has comido no debería perseguirte por el súper.</li>
           <li><strong>Las cantidades se suman cuando se puede.</strong> 200 g de harina para una comida y 150 g para otra se convierten en 350 g.</li>
           <li><strong>Las unidades distintas van en líneas separadas.</strong> «200 g de harina» y «2 tazas de harina» no se juntan, porque convertir bien entre ellas es algo que la aplicación todavía no hace, y un total inventado es peor que dos líneas honestas.</li>
-          <li>Funciona igual con recetas en español que en inglés: «cebolla» va a Frutas y verduras y «onion» también.</li>
+          <li>Funciona igual con recetas en español, inglés o portugués: «cebolla» va a Frutas y verduras, y «onion» y «cebola» también.</li>
           <li>Las marcas se quedan mientras compras, aunque cierres la aplicación.</li>
         </ul>
       </section>
@@ -254,7 +261,7 @@
         <h2>Ajustes</h2>
         <ul class="legal-steps">
           <li><strong>Apariencia</strong>: Claro, Oscuro o Sistema. Sistema sigue lo que haga tu teléfono, incluida su programación.</li>
-          <li><strong>Idioma</strong>: Sistema, English o Español. Sistema sigue el idioma de tu teléfono. Solo cambia las palabras de la aplicación: tus recetas se quedan en el idioma en que se escribieron, y la aplicación lee recetas en español y en inglés sea cual sea el idioma elegido.</li>
+          <li><strong>Idioma</strong>: Sistema, English, Español o Português. Sistema sigue el idioma de tu teléfono. Solo cambia las palabras de la aplicación: tus recetas se quedan en el idioma en que se escribieron, y la aplicación lee recetas en español, inglés y portugués sea cual sea el idioma elegido.</li>
           <li><strong>La semana empieza el</strong>: lunes o domingo, como tú la cuentes. El menú reorganiza la semana que estás viendo en lugar de llevarte a otra.</li>
         </ul>
       </section>
@@ -272,8 +279,8 @@
         <h3>Instagram no ha devuelto nada</h3>
         <p>A veces Instagram muestra una página de inicio de sesión en lugar de la publicación. Esperar un momento y volver a intentarlo suele funcionar; si no, copia la descripción y pégala.</p>
 
-        <h3>Mis recetas no están en español ni en inglés</h3>
-        <p>Damson Kitchen lee recetas en español y en inglés. El idioma importa porque la aplicación no solo muestra una receta, la <strong>lee</strong>: entiende que una línea es un ingrediente, que «1&frac12; cucharada» es una cantidad y una unidad, y dónde empieza la preparación. Todo eso va idioma a idioma, así que añadir otro idioma significa enseñarle a leerlo, no solo traducir los botones.</p>
+        <h3>Mis recetas no están en español, inglés ni portugués</h3>
+        <p>Damson Kitchen lee recetas en español, inglés y portugués. El idioma importa porque la aplicación no solo muestra una receta, la <strong>lee</strong>: entiende que una línea es un ingrediente, que «1&frac12; cucharada» es una cantidad y una unidad, y dónde empieza la preparación. Todo eso va idioma a idioma, así que añadir otro idioma significa enseñarle a leerlo, no solo traducir los botones.</p>
         <p>Puedes escribir recetas en cualquier otro idioma: escríbelas o pégalas y se guardan tal como las escribiste. Lo que todavía no funcionará es la parte automática: las cantidades no se ajustarán y la lista de la compra no podrá sumarlas.</p>
 
         <h3>Un escaneo ha salido sin sentido</h3>
@@ -336,7 +343,7 @@
       </div>
     </div>
     <div class="footer__bottom container">
-      <p>&copy; 2026 Damson Kitchen. Todos los derechos reservados. · <a href="/help.html" lang="en" hreflang="en">English</a></p>
+      <p>&copy; 2026 Damson Kitchen. Todos los derechos reservados. · <a href="/help.html" lang="en" hreflang="en">English</a> · <a href="/pt/help.html" lang="pt" hreflang="pt">Português</a></p>
     </div>
   </footer>
 

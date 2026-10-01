@@ -3,18 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Send a Spanish-speaking visitor to the Spanish page, but only on arrival from
-       outside the site: moving around it (including clicking "English" on a Spanish
-       page) is always respected, and ?lang=en forces English. Nothing is stored. -->
+  <!-- Send a Spanish- or Portuguese-speaking visitor to their page, but only on arrival from
+       outside the site: moving around it (including choosing English from the language
+       menu) is always respected, and ?lang=en forces English. Nothing is stored. -->
   <script>
     (function () {
       try {
         if (document.referrer.indexOf(location.origin) === 0) return;
         if (/[?&]lang=en(&|$)/.test(location.search)) return;
         var first = ((navigator.languages && navigator.languages[0]) || navigator.language || '').toLowerCase();
-        if (first.slice(0, 2) !== 'es') return;
+        var lang = first.slice(0, 2);
+        if (lang !== 'es' && lang !== 'pt') return;
         var path = location.pathname === '/' || location.pathname === '/index.html' ? '/' : location.pathname;
-        location.replace('/es' + path + location.hash);
+        location.replace('/' + lang + path + location.hash);
       } catch (e) {}
     })();
   </script>
@@ -41,7 +42,14 @@
         <a href="/#how-it-works">How It Works</a>
         <a href="https://play.google.com/store/apps/details?id=com.damsonkitchen.app" class="btn btn--primary btn--sm" target="_blank" rel="noopener">Get the App</a>
       </nav>
-      <a href="/es/help.html" lang="es" hreflang="es" class="nav__lang-toggle" aria-label="Ver esta página en español" title="Ver esta página en español"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg><span>ES</span></a>
+      <details class="nav__lang">
+        <summary aria-label="Language / Idioma" title="Language / Idioma"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg><span>EN</span><svg class="nav__lang-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></summary>
+        <ul class="nav__lang-menu">
+          <li><a href="/help.html" lang="en" hreflang="en" aria-current="true">English</a></li>
+          <li><a href="/es/help.html" lang="es" hreflang="es">Español</a></li>
+          <li><a href="/pt/help.html" lang="pt" hreflang="pt">Português</a></li>
+        </ul>
+      </details>
       <button class="nav__hamburger" aria-label="Open menu">
         <span></span><span></span><span></span>
       </button>
@@ -194,7 +202,7 @@
           <li><strong>It starts from today, not from Monday.</strong> A meal you already ate shouldn't follow you round the shop.</li>
           <li><strong>Amounts are added up where they can be.</strong> 200g flour for one meal and 150g for another becomes 350g.</li>
           <li><strong>Different units stay on separate lines.</strong> "200g flour" and "2 cups flour" aren't combined, because converting between them properly is something the app doesn't do yet — and an invented total is worse than two honest lines.</li>
-          <li>It works the same for Spanish recipes as English ones: "cebolla" goes under Produce, just as "onion" does.</li>
+          <li>It works the same for Spanish and Portuguese recipes as English ones: "cebolla" and "cebola" go under Produce, just as "onion" does.</li>
           <li>Ticks stay put as you shop, and survive closing the app.</li>
         </ul>
       </section>
@@ -239,7 +247,7 @@
           </table>
         </div>
         <p>That second row is deliberate. If someone else wrote the recipe, the fair thing is to point at their page rather than retype their words into a message — so credit stays where it belongs.</p>
-        <p>It's sent as ordinary text, so whoever receives it can just read it, with or without the app. If they do have Damson Kitchen, the message is laid out so it imports cleanly. The message is written in the recipe's own language, so a Spanish recipe goes out with Spanish headings even from an English phone.</p>
+        <p>It's sent as ordinary text, so whoever receives it can just read it, with or without the app. If they do have Damson Kitchen, the message is laid out so it imports cleanly. The message is written in the recipe's own language, so a Spanish or Portuguese recipe goes out with its own headings even from an English phone.</p>
       </section>
 
       <!-- BACKUP -->
@@ -268,7 +276,7 @@
         <h2>Settings</h2>
         <ul class="legal-steps">
           <li><strong>Appearance</strong> — Light, Dark, or System. System follows whatever your phone is doing, including its schedule.</li>
-          <li><strong>Language</strong> — System, English, or Español. System follows your phone's language. It changes only the app's own words: your recipes stay in the language they were written in, and the app reads English and Spanish recipes whichever you choose.</li>
+          <li><strong>Language</strong> — System, English, Español, or Português. System follows your phone's language. It changes only the app's own words: your recipes stay in the language they were written in, and the app reads English, Spanish and Portuguese recipes whichever you choose.</li>
           <li><strong>Week starts on</strong> — Monday or Sunday, whichever you think in. The planner re-frames the week you're looking at rather than jumping you elsewhere.</li>
         </ul>
       </section>
@@ -286,8 +294,8 @@
         <h3>Instagram gave nothing back</h3>
         <p>Instagram sometimes serves a sign-in page instead of the post. Waiting a moment and trying again often works; failing that, copy the caption and paste it.</p>
 
-        <h3>My recipes aren't in English or Spanish</h3>
-        <p>Damson Kitchen reads recipes written in English or Spanish. The language matters because the app doesn't just display a recipe, it <strong>reads</strong> one — working out that a line is an ingredient, that "1&frac12; tbsp" is an amount and a unit, and where the method begins. All of that is language by language, so another language means teaching it to read that language, not swapping the labels.</p>
+        <h3>My recipes aren't in English, Spanish or Portuguese</h3>
+        <p>Damson Kitchen reads recipes written in English, Spanish or Portuguese. The language matters because the app doesn't just display a recipe, it <strong>reads</strong> one — working out that a line is an ingredient, that "1&frac12; tbsp" is an amount and a unit, and where the method begins. All of that is language by language, so another language means teaching it to read that language, not swapping the labels.</p>
         <p>You can write recipes in any other language too: type or paste them and they are saved exactly as you wrote them. What won't work yet is the automatic part — amounts won't scale, and the shopping list can't add them up.</p>
 
         <h3>A scan came back as gibberish</h3>
@@ -350,7 +358,7 @@
       </div>
     </div>
     <div class="footer__bottom container">
-      <p>&copy; 2026 Damson Kitchen. All rights reserved. · <a href="/es/help.html" lang="es" hreflang="es">Español</a></p>
+      <p>&copy; 2026 Damson Kitchen. All rights reserved. · <a href="/es/help.html" lang="es" hreflang="es">Español</a> · <a href="/pt/help.html" lang="pt" hreflang="pt">Português</a></p>
     </div>
   </footer>
 
