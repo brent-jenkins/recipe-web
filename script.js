@@ -30,3 +30,15 @@ document.querySelectorAll('.feature-card').forEach((card, i) => {
 document.querySelectorAll('.testimonial-card').forEach((card, i) => {
   card.style.transitionDelay = `${i * 80}ms`;
 });
+
+// Language menu: a <details> opens itself; close it on an outside tap or Escape.
+const langMenu = document.querySelector('.nav__lang');
+document.addEventListener('click', e => {
+  if (langMenu?.open && !langMenu.contains(e.target)) langMenu.open = false;
+});
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && langMenu?.open) {
+    langMenu.open = false;
+    langMenu.querySelector('summary')?.focus();
+  }
+});

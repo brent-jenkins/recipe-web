@@ -3,18 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Send a Spanish-speaking visitor to the Spanish page, but only on arrival from
-       outside the site: moving around it (including clicking "English" on a Spanish
-       page) is always respected, and ?lang=en forces English. Nothing is stored. -->
+  <!-- Send a Spanish- or Portuguese-speaking visitor to their page, but only on arrival from
+       outside the site: moving around it (including choosing English from the language
+       menu) is always respected, and ?lang=en forces English. Nothing is stored. -->
   <script>
     (function () {
       try {
         if (document.referrer.indexOf(location.origin) === 0) return;
         if (/[?&]lang=en(&|$)/.test(location.search)) return;
         var first = ((navigator.languages && navigator.languages[0]) || navigator.language || '').toLowerCase();
-        if (first.slice(0, 2) !== 'es') return;
+        var lang = first.slice(0, 2);
+        if (lang !== 'es' && lang !== 'pt') return;
         var path = location.pathname === '/' || location.pathname === '/index.html' ? '/' : location.pathname;
-        location.replace('/es' + path + location.hash);
+        location.replace('/' + lang + path + location.hash);
       } catch (e) {}
     })();
   </script>
@@ -72,7 +73,14 @@
         <a href="#how-it-works">How It Works</a>
         <a href="https://play.google.com/store/apps/details?id=com.damsonkitchen.app" class="btn btn--primary btn--sm" target="_blank" rel="noopener">Get the App</a>
       </nav>
-      <a href="/es/" lang="es" hreflang="es" class="nav__lang-toggle" aria-label="Ver esta página en español" title="Ver esta página en español"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg><span>ES</span></a>
+      <details class="nav__lang">
+        <summary aria-label="Language / Idioma" title="Language / Idioma"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg><span>EN</span><svg class="nav__lang-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></summary>
+        <ul class="nav__lang-menu">
+          <li><a href="/" lang="en" hreflang="en" aria-current="true">English</a></li>
+          <li><a href="/es/" lang="es" hreflang="es">Español</a></li>
+          <li><a href="/pt/" lang="pt" hreflang="pt">Português</a></li>
+        </ul>
+      </details>
       <button class="nav__hamburger" aria-label="Open menu">
         <span></span><span></span><span></span>
       </button>
@@ -90,7 +98,7 @@
           <a href="https://play.google.com/store/apps/details?id=com.damsonkitchen.app" class="btn btn--primary" target="_blank" rel="noopener">Get it on Google Play</a>
           <a href="#features" class="btn btn--ghost">Learn More</a>
         </div>
-        <p class="hero__note">On Android, in English and Spanish.</p>
+        <p class="hero__note">On Android, in English, Spanish and Portuguese.</p>
       </div>
       <div class="hero__phone">
         <div class="shot-stack">
@@ -319,7 +327,7 @@
       </div>
       <h2>Start your recipe book</h2>
       <p>Damson Kitchen is free on Android. There's no account to create and nothing to subscribe to — install it and start with the recipes you already love.</p>
-      <p class="download__note">The app is in English and Spanish, and reads recipes in both — save a Spanish recipe on an English phone and it scales just the same. Languages come one at a time because the app <em>reads</em> the recipes you paste, type and photograph, and working out which line is an ingredient, or what &ldquo;1&frac12; tbsp&rdquo; means, has to be done language by language.</p>
+      <p class="download__note">The app is in English, Spanish and Portuguese, and reads recipes in all three — save a Spanish or Portuguese recipe on an English phone and it scales just the same. Languages come one at a time because the app <em>reads</em> the recipes you paste, type and photograph, and working out which line is an ingredient, or what &ldquo;1&frac12; tbsp&rdquo; means, has to be done language by language.</p>
       <div class="download__badges">
         <a href="https://play.google.com/store/apps/details?id=com.damsonkitchen.app" class="store-badge" target="_blank" rel="noopener" aria-label="Get Damson Kitchen on Google Play">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -365,7 +373,7 @@
       </div>
     </div>
     <div class="footer__bottom container">
-      <p>&copy; 2026 Damson Kitchen. All rights reserved. · <a href="/es/" lang="es" hreflang="es">Español</a></p>
+      <p>&copy; 2026 Damson Kitchen. All rights reserved. · <a href="/es/" lang="es" hreflang="es">Español</a> · <a href="/pt/" lang="pt" hreflang="pt">Português</a></p>
     </div>
   </footer>
 

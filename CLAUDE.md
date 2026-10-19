@@ -16,13 +16,14 @@ Static marketing and legal website for the Damson Kitchen recipe app. No build s
 | `terms.html` | Terms of Service |
 | `delete-account.html` | A redirect to `privacy.html#your-data`, kept only so old links work. There are no accounts, so Play asks for no deletion URL |
 | `styles.css` | All styles — BEM-ish classes, CSS custom properties for brand tokens |
-| `script.js` | Mobile nav toggle and scroll fade-in animations |
+| `script.js` | Mobile nav toggle, closing the language menu on an outside tap or Escape, and scroll fade-in animations |
 | `CNAME` | Custom domain: `damsonkitchen.com` |
 | `robots.txt` | Allows all crawlers; points to sitemap |
 | `sitemap.xml` | Lists all public pages — update `lastmod` and add `<url>` entries whenever pages change |
 | `assets/favicon.svg` | The plum mark. Inline SVG, no PNG fallback |
 | `assets/og-image.png` | Link-preview image (`og:image`, `twitter:image`, and the JSON-LD `screenshot`). The Play feature graphic, so it is already 1024×500 landscape |
 | `es/*.html` | The Spanish site: a twin of every page above, in the Spanish of Spain. See "The Spanish site" |
+| `pt/*.html` | The Portuguese site, in Brazil's Portuguese. Same structure as `es/`. See "The Portuguese site" |
 | `assets/shots/*.png` | Real phone screenshots of the current app — used by the hero `.shot-stack`, the gallery strip, and `help.html`'s `.guide-figure` |
 
 ## Brand tokens (styles.css)
@@ -167,13 +168,23 @@ The two duplicated `assets/screenshot.png` entries that used to sit here are gon
 
 `es/` holds a Spanish twin of every page — `index`, `help`, `privacy`, `terms`, and the `delete-account` redirect. It went up with the app release that translated the app's own screens; before that the site only said the app *read* Spanish recipes.
 
-- **Spanish-speaking visitors are redirected on arrival**, by a small inline script in the head of the English pages: only when the browser's *first* language is Spanish, only when arriving from outside the site (so clicking "English" is always respected), and never with `?lang=en`. It reads the referrer rather than storing a choice, so the privacy policy's no-cookies/no-storage line stays true. Googlebot crawls in English and is never redirected; the hreflang tags do the search-side work.
-- **Every page names its twin**: `hreflang` alternates (`en`, `es`, and `x-default` → English) in the head, a globe + `ES`/`EN` pill (`.nav__lang-toggle`) in the header, and a link in the footer's bottom line. The pill sits **outside** `.nav__links` so it stays visible on phones, where the menu collapses; it names the other language, so two languages is one tap — switch to a dropdown at three. `sitemap.xml` lists both with `xhtml:link` alternates. Add a page, add its twin to all of these.
+- **Spanish- and Portuguese-speaking visitors are redirected on arrival**, by a small inline script in the head of the English pages: only when the browser's *first* language is Spanish or Portuguese (to `/es/` or `/pt/`), only when arriving from outside the site (so choosing English is always respected), and never with `?lang=en`. It reads the referrer rather than storing a choice, so the privacy policy's no-cookies/no-storage line stays true. Googlebot crawls in English and is never redirected; the hreflang tags do the search-side work.
+- **Every page names its twins**: `hreflang` alternates (`en`, `es`, `pt`, and `x-default` → English) in the head, a language menu (`.nav__lang`) in the header, and links to the other two languages in the footer's bottom line. The menu is a `<details>` — it opens with no script; `script.js` only closes it on an outside tap or Escape — showing a globe and the current language's code, and listing each language named in itself. It sits **outside** `.nav__links` so it stays visible on phones, where the menu collapses. It replaced a one-tap EN/ES pill when the third language arrived. `sitemap.xml` lists every language with `xhtml:link` alternates. Add a page, add its twins to all of these; add a language, add it to every page's menu, hreflang, footer and the sitemap.
 - **`es/` pages reference shared files with `../`** (`../styles.css`, `../assets/…`, `../script.js`); links between Spanish pages stay relative, links to the home sections are absolute (`/es/#features`).
 - **`help.html`'s anchors are the same in both** (`#adding`, `#cooking`, …) and must never be translated: the app deep-links to them, and opens `/es/help.html` when it is shown in Spanish.
 - **The legal pages are short translations, and say so**: each notes that the English version prevails, *without affecting consumer-law rights*. Both languages name the ICO and the AEPD. `es/delete-account.html` is a redirect, like its English twin, and neither is in the sitemap. **Not reviewed by a lawyer.**
 - **Spanish pages use `assets/shots-es/`** — the Spanish app with the Spanish demo library, same filenames and 720×1280 palette PNGs as `assets/shots/`. They are scaled from the app repo's `store/Phone-es/`, which is how to regenerate them.
 - Tone is Spain's Spanish with the informal "tú", matching the app. Guillemets («») rather than curly quotes, as Spanish typography prefers.
+
+## The Portuguese site
+
+`pt/` mirrors `es/` page for page, in **Brazil's** Portuguese with "você", matching the app's `pt.ts`. It went up with app 1.0.6, which added the Portuguese interface — push it only once that release is live on Play.
+
+- **`hreflang="pt"`, not `pt-BR`**, so a Portugal search finds it too; the app does the same, giving a `pt_PT` phone the Brazilian strings. `og:locale` is `pt_BR` and `<html lang>` is `pt-BR`, because that is what the text is.
+- **The legal pages name the ANPD and the LGPD** beside the ICO, as the Spanish ones name the AEPD. Same caveat: English prevails, consumer rights unaffected, **not reviewed by a lawyer**.
+- **`assets/shots-pt/`** is scaled from the app repo's `store/Phone-pt/` (Portuguese demo library, `src/devSeedPt.ts`), same filenames and 720×1280 palette PNGs.
+- Play links carry `hl=pt-BR`. Curly double quotes, as Brazilian typography uses.
+- **Written without a native speaker**; the app's two Brazilian testers are the first review.
 
 ## Deployment
 
