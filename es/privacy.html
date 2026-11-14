@@ -54,7 +54,7 @@
     <div class="container legal-container">
 
       <div class="legal-notice">
-        <strong>En resumen:</strong> tus recetas, fotos y notas se quedan en tu teléfono, y no guardamos nada de ellas. La excepción es la importación con IA de Damson Kitchen Premium, y solo cuando la usas: envía las palabras de la receta que estás importando —nunca una foto ni tus otras recetas— para ponerlas en orden, y no se guarda nada de ellas en nuestro lado. El sitio web no usa cookies ni analítica.
+        <strong>En resumen:</strong> tus recetas, fotos y notas se quedan en tu teléfono, y no guardamos nada de ellas. La excepción son las funciones de IA de Damson Kitchen Premium, y solo cuando las usas: envían las palabras de lo que pides —la receta que importas o cambias, o tu petición—, nunca una foto ni el resto de tus recetas, y no se guarda nada de ellas en nuestro lado. El sitio web no usa cookies ni analítica.
       </div>
 
       <p><em>Traducción de la <a href="/privacy.html" lang="en" hreflang="en">versión en inglés</a>, que prevalece en caso de discrepancia, sin perjuicio de tus derechos según la ley de tu país.</em></p>
@@ -66,22 +66,23 @@
 
       <section class="legal-section">
         <h2>La aplicación</h2>
-        <p>No hay cuentas, ni analítica, ni publicidad, ni seguimiento de ningún tipo. Todo lo que pones en la aplicación (recetas, colecciones, notas, menús y fotos) se guarda solo en tu teléfono. <strong>Nunca recibimos tu biblioteca.</strong> Lo único que sale de tu teléfono hacia nuestro servicio se describe en <a href="#ai-import">Importar con IA</a> y <a href="#premium">Damson Kitchen Premium</a>, y solo cuando usas esas funciones.</p>
+        <p>No hay cuentas, ni analítica, ni publicidad, ni seguimiento de ningún tipo. Todo lo que pones en la aplicación (recetas, colecciones, notas, menús y fotos) se guarda solo en tu teléfono. <strong>Nunca recibimos tu biblioteca.</strong> Lo único que sale de tu teléfono hacia nuestro servicio se describe en <a href="#ai-import">Funciones de IA</a> y <a href="#premium">Damson Kitchen Premium</a>, y solo cuando usas esas funciones.</p>
         <ul>
           <li><strong>Al importar una receta</strong>, la página que pides se descarga directamente desde tu teléfono. Esa web ve la petición como cualquier visita; no pasa por nosotros.</li>
           <li><strong>Al exportar</strong>, se crea un archivo de copia de seguridad en tu teléfono y se entrega a lo que elijas para enviarlo. Nunca lo recibimos.</li>
-          <li><strong>Al escanear una receta</strong>, las palabras de la foto se leen en tu teléfono. La foto no se sube a ningún sitio, tampoco cuando después ordenas esas palabras con IA.</li>
+          <li><strong>Al escanear una receta</strong>, las palabras de la foto se leen en tu teléfono. La foto no se sube a ningún sitio, tampoco cuando después importas esas palabras con IA.</li>
+          <li id="microphone"><strong>Hablar en lugar de escribir.</strong> El botón del micrófono de Cocinar con IA usa el reconocimiento de voz del propio teléfono: en Android, el de Google, el mismo servicio que el micrófono del teclado. Según el teléfono, convierte la voz en palabras en el propio teléfono o en los servidores de Google, según las condiciones de Google. Damson Kitchen solo recibe las palabras, nunca la grabación, y solo escucha después de que toques el micrófono. No se nos envía nada hasta que decides enviar tu petición.</li>
           <li><strong>Al compartir una receta</strong>, el mensaje se entrega a la aplicación que elijas. No se sube nada.</li>
         </ul>
         <p><strong>La copia de seguridad del propio Android.</strong> Tu teléfono puede copiar los datos de la aplicación a tu Google Drive personal para restaurarlos en un teléfono nuevo. Esa copia es tuya: no podemos verla ni leerla. Las fotos de las recetas no se incluyen. Puedes desactivarla en los ajustes del teléfono, en <strong>Sistema &rarr; Copia de seguridad</strong>.</p>
       </section>
 
       <section class="legal-section" id="ai-import">
-        <h2>Importar con IA</h2>
-        <p>Ordenar con IA y Buscar la receta con IA son opcionales, forman parte de Damson Kitchen Premium y no se envía nada hasta que decides usarlas. La primera vez, la aplicación te explica qué se envía y te pide que confirmes.</p>
+        <h2>Funciones de IA</h2>
+        <p>Importar con IA, Buscar la receta con IA y Cocinar con IA (Cambiar una receta, ¿Qué puedo hacer? y Planificar un menú) son opcionales, forman parte de Damson Kitchen Premium y no se envía nada hasta que decides usarlas. La primera vez, la aplicación te explica qué se envía y te pide que confirmes.</p>
         <ul>
-          <li><strong>Qué se envía:</strong> el texto que estás importando —las palabras del cuadro de importación (escritas, pegadas o leídas de un escaneo en tu teléfono), o el texto legible de una página de recetas que hayas compartido con la aplicación, que tu teléfono descarga y recorta antes— y un identificador aleatorio que la aplicación crea una sola vez, la primera vez que la usas. Nada más: ni tus fotos, ni tus otras recetas, ni tu ubicación, tu nombre o tus contactos.</li>
-          <li><strong>Adónde va:</strong> a nuestro servicio en api.damsonkitchen.com, que funciona en Cloudflare, y desde ahí a Anthropic, la empresa que creó Claude, que pone la receta en orden y la devuelve a tu teléfono. El resultado aparece en el cuadro de importación para que lo revises; no se guarda nada hasta que lo importas.</li>
+          <li><strong>Qué se envía:</strong> al importar, el texto que estás importando: las palabras del cuadro de importación (escritas, pegadas o leídas de un escaneo en tu teléfono), o el texto legible de una página de recetas que hayas compartido con la aplicación, que tu teléfono descarga y recorta antes. Con Cocinar con IA, lo que escribes o dices en el cuadro de petición y, cuando cambias una receta, el título, los ingredientes y la preparación de esa receta. Con cada petición, un identificador aleatorio que la aplicación crea una sola vez, la primera vez que la usas. Nada más: ni tus fotos, ni el resto de tus recetas, ni tus notas, ni tu ubicación, tu nombre o tus contactos.</li>
+          <li><strong>Adónde va:</strong> a nuestro servicio en api.damsonkitchen.com, que funciona en Cloudflare, y desde ahí a Anthropic, la empresa que creó Claude, que pone la receta en orden, o escribe las recetas que has pedido, y las devuelve a tu teléfono. El resultado se abre para que lo revises; no se guarda nada hasta que lo guardas.</li>
           <li><strong>Qué se conserva:</strong> nuestro servicio no guarda ni registra el texto. Solo anota cuántas palabras se enviaron y la longitud de la respuesta, para controlar los costes. Cloudflare, como cualquier proveedor de red, trata tu dirección IP y los datos básicos de la petición para prestar el servicio y mantenerlo seguro. Anthropic trata el texto como proveedor nuestro según sus condiciones comerciales, que no le permiten entrenar sus modelos con él; Anthropic puede conservarlo durante un tiempo limitado para vigilar la seguridad y el abuso, tal como describe su política de privacidad.</li>
           <li><strong>El identificador aleatorio</strong> se usa solo para evitar que el servicio se use en exceso. No está vinculado a ti, al hardware de tu teléfono ni a nada más; al desinstalar la aplicación desaparece.</li>
           <li><strong>Para qué:</strong> para ofrecerte la función que has pedido.</li>
@@ -91,7 +92,7 @@
 
       <section class="legal-section" id="premium">
         <h2>Damson Kitchen Premium</h2>
-        <p>Escanear e importar con IA forman parte de Damson Kitchen Premium, una suscripción que compras a través de Google Play. Google gestiona el pago; nunca vemos los datos de tu tarjeta ni de tu banco. Para comprobar que una petición viene de un suscriptor, la aplicación envía la referencia de compra de la suscripción (un código que Google Play da a la aplicación) con cada importación con IA, y nuestro servicio pregunta a Google si está activa. Guardamos una forma codificada e irreversible de esa referencia, nunca la referencia en sí: durante unos minutos junto a la respuesta de Google, para no tener que volver a preguntar en cada petición, y, mientras usas la importación con IA, junto a un recuento de tus peticiones de IA, para aplicar el límite de uso razonable de nuestras <a href="/es/terms.html">condiciones de uso</a> (el recuento vuelve a empezar cada mes). No guardamos nada más sobre tu compra. Escanear por sí solo funciona entero en tu teléfono y no envía nada. Puedes gestionar o cancelar la suscripción en Google Play cuando quieras.</p>
+        <p>Escanear y las funciones de IA forman parte de Damson Kitchen Premium, una suscripción que compras a través de Google Play. Google gestiona el pago; nunca vemos los datos de tu tarjeta ni de tu banco. Para comprobar que una petición viene de un suscriptor, la aplicación envía la referencia de compra de la suscripción (un código que Google Play da a la aplicación) con cada petición de IA, y nuestro servicio pregunta a Google si está activa. Guardamos una forma codificada e irreversible de esa referencia, nunca la referencia en sí: durante unos minutos junto a la respuesta de Google, para no tener que volver a preguntar en cada petición, y, mientras usas las funciones de IA, junto a un recuento de tus peticiones de IA, para aplicar el límite de uso razonable de nuestras <a href="/es/terms.html">condiciones de uso</a> (el recuento vuelve a empezar cada mes). No guardamos nada más sobre tu compra. Escanear por sí solo funciona entero en tu teléfono y no envía nada. Puedes gestionar o cancelar la suscripción en Google Play cuando quieras.</p>
       </section>
 
       <section class="legal-section">
@@ -112,7 +113,7 @@
 
       <section class="legal-section">
         <h2>Tus derechos</h2>
-        <p>Según la normativa de protección de datos del Reino Unido y de la UE, puedes pedirnos una copia de los datos personales que tengamos sobre ti, pedirnos que los corrijamos o eliminemos, u oponerte a cómo los usamos. En la práctica, eso significa los correos que nos hayas enviado; no guardamos nada de la importación con IA. Escribe a <a href="mailto:support@zayvori.com">support@zayvori.com</a> y te responderemos en el plazo de un mes.</p>
+        <p>Según la normativa de protección de datos del Reino Unido y de la UE, puedes pedirnos una copia de los datos personales que tengamos sobre ti, pedirnos que los corrijamos o eliminemos, u oponerte a cómo los usamos. En la práctica, eso significa los correos que nos hayas enviado; no guardamos nada de las funciones de IA. Escribe a <a href="mailto:support@zayvori.com">support@zayvori.com</a> y te responderemos en el plazo de un mes.</p>
         <p>También puedes presentar una reclamación ante una autoridad de protección de datos: en España, la <strong>Agencia Española de Protección de Datos</strong> (<a href="https://www.aepd.es" target="_blank" rel="noopener">aepd.es</a>); en el Reino Unido, la <strong>Information Commissioner's Office</strong> (<a href="https://ico.org.uk" target="_blank" rel="noopener">ico.org.uk</a>); o la autoridad del país donde vivas.</p>
       </section>
 
