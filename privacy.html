@@ -61,7 +61,7 @@
     <div class="container legal-hero__inner">
       <span class="section-eyebrow">Legal</span>
       <h1>Privacy Policy</h1>
-      <p class="legal-hero__meta">Last updated: <strong>28 September 2026</strong></p>
+      <p class="legal-hero__meta">Last updated: <strong>14 November 2026</strong></p>
     </div>
   </section>
 
@@ -70,7 +70,7 @@
     <div class="container legal-container">
 
       <div class="legal-notice">
-        <strong>In short:</strong> the app collects nothing. Your recipes, photos and notes stay on your phone, and we never receive them. The website uses no cookies and no analytics. The only personal data we ever see is an email you choose to send us.
+        <strong>In short:</strong> your recipes, photos and notes stay on your phone, and we don’t keep them. The exception is AI import in Damson Kitchen Premium, and only when you use it: it sends the words of the recipe you’re importing — never a photo, never your other recipes — to be put in order, and nothing of it is kept on our side. The website uses no cookies and no analytics.
       </div>
 
       <section class="legal-section">
@@ -80,14 +80,32 @@
 
       <section class="legal-section">
         <h2>The app</h2>
-        <p>There are no accounts, no analytics, no advertising and no tracking of any kind. Everything you put in the app — recipes, collections, notes, planned meals and photos — is stored only on your phone. <strong>We never receive it, and we have no server that could.</strong></p>
+        <p>There are no accounts, no analytics, no advertising and no tracking of any kind. Everything you put in the app — recipes, collections, notes, planned meals and photos — is stored only on your phone. <strong>We never receive your library.</strong> The only things that ever leave your phone for our service are described under <a href="#ai-import">AI import</a> and <a href="#premium">Damson Kitchen Premium</a>, and only when you use them.</p>
         <ul>
           <li><strong>Importing a recipe</strong> fetches the page you asked for directly from your phone. That website sees the request as it would any visit; it does not pass through us.</li>
           <li><strong>Exporting</strong> creates a backup file on your phone and hands it to whatever you choose to send it with. We never receive it.</li>
-          <li><strong>Scanning a recipe</strong> reads the photo on your phone. The photo is not uploaded anywhere.</li>
+          <li><strong>Scanning a recipe</strong> reads the words in the photo on your phone. The photo is never uploaded anywhere — not even when you then tidy the words with AI.</li>
           <li><strong>Sharing a recipe</strong> hands a message to the app you pick. Nothing is uploaded.</li>
         </ul>
         <p><strong>Android's own backup.</strong> Your phone may copy app data to your personal Google Drive so it can be restored on a new phone. That backup is yours: we cannot see or read it. Recipe photos are left out of it. You can turn it off in your phone's settings under <strong>System &rarr; Backup</strong>.</p>
+      </section>
+
+      <section class="legal-section" id="ai-import">
+        <h2>AI import</h2>
+        <p>Tidy with AI and Find the recipe with AI are optional, part of Damson Kitchen Premium, and nothing is sent until you choose to use them. The first time, the app tells you what is sent and asks you to continue.</p>
+        <ul>
+          <li><strong>What is sent:</strong> the text you’re importing — the words in the import box (typed, pasted, or read from a scan on your phone), or the readable text of a recipe page you shared with the app, which your phone fetches and trims first — and a random identifier the app makes once, the first time you use it. Nothing else: not your photos, your other recipes, your location, your name or your contacts.</li>
+          <li><strong>Where it goes:</strong> to our service at api.damsonkitchen.com, which runs on Cloudflare, and from there to Anthropic, the maker of Claude, which puts the recipe in order and sends it back to your phone. The result goes into the import box for you to check; nothing is saved until you import it.</li>
+          <li><strong>What is kept:</strong> our service does not store or log the text. It records only how many words were sent and how long the answer was, to keep track of costs. Cloudflare, like any network provider, processes your IP address and basic request details to deliver the service and keep it secure. Anthropic processes the text as our service provider under its commercial terms, which do not allow it to train its models on it; Anthropic may keep it for a limited time for safety and abuse monitoring, as described in its privacy policy.</li>
+          <li><strong>The random identifier</strong> is used only to stop the service being overused. It isn’t linked to you, your phone’s hardware or anything else; uninstalling the app removes it.</li>
+          <li><strong>Why:</strong> to provide the feature you asked for.</li>
+        </ul>
+        <p>Cloudflare and Anthropic are based in the United States. Where your text is processed outside the UK or EU, it is protected by the safeguards those companies provide for international transfers, such as standard contractual clauses. See <a href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener">Anthropic’s privacy policy</a> and <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Cloudflare’s privacy policy</a>.</p>
+      </section>
+
+      <section class="legal-section" id="premium">
+        <h2>Damson Kitchen Premium</h2>
+        <p>Scanning and AI import are part of Damson Kitchen Premium, a subscription you buy through Google Play. Google handles the payment; we never see your card or bank details. To check that a request comes from a subscriber, the app sends the subscription’s purchase reference (a code Google Play gives the app) with each AI import, and our service asks Google whether it’s active. We keep a scrambled form of that reference, never the reference itself: for a few minutes alongside Google’s answer, to avoid asking Google again on every request, and, while you use AI import, alongside a count of your AI requests, to apply the fair-use allowance in our <a href="/terms.html">terms of use</a> (the count starts again each month). We keep nothing else about your purchase. Scanning on its own runs entirely on your phone and sends nothing. You can manage or cancel the subscription in Google Play at any time.</p>
       </section>
 
       <section class="legal-section">
@@ -103,24 +121,24 @@
 
       <section class="legal-section" id="your-data">
         <h2>Deleting your data</h2>
-        <p>There is no account to delete, and nothing of yours on our side. To delete a recipe or collection, delete it in the app. To delete everything, uninstall the app. If you want to keep your recipes first, use <strong>Settings &rarr; Data &amp; Backup &rarr; Export My Data</strong> before uninstalling.</p>
+        <p>There is no account to delete, and none of your recipes are stored on our side. The only thing we keep is the scrambled purchase reference and request count described under <a href="#premium">Damson Kitchen Premium</a>, which can’t be linked back to you. To delete a recipe or collection, delete it in the app. To delete everything, uninstall the app. If you want to keep your recipes first, use <strong>Settings &rarr; Data &amp; Backup &rarr; Export My Data</strong> before uninstalling.</p>
       </section>
 
       <section class="legal-section">
         <h2>Your rights</h2>
-        <p>Under UK and EU data protection law you can ask for a copy of the personal data we hold about you, ask us to correct or delete it, or object to how we use it. In practice that means any emails you have sent us. Email <a href="mailto:support@zayvori.com">support@zayvori.com</a> and we will respond within a month.</p>
+        <p>Under UK and EU data protection law you can ask for a copy of the personal data we hold about you, ask us to correct or delete it, or object to how we use it. In practice that means any emails you have sent us; we hold nothing from AI import. Email <a href="mailto:support@zayvori.com">support@zayvori.com</a> and we will respond within a month.</p>
         <p>You can also complain to a data protection authority: in the UK the <strong>Information Commissioner's Office</strong> (<a href="https://ico.org.uk" target="_blank" rel="noopener">ico.org.uk</a>), in Spain the <strong>Agencia Española de Protección de Datos</strong> (<a href="https://www.aepd.es" target="_blank" rel="noopener">aepd.es</a>), or the authority where you live.</p>
       </section>
 
       <section class="legal-section">
         <h2>Children</h2>
-        <p>Damson Kitchen is not aimed at children, and the app collects nothing from anyone. If a child has emailed us and a parent would like that email deleted, contact us and we will delete it.</p>
+        <p>Damson Kitchen is not aimed at children. If a child has emailed us and a parent would like that email deleted, contact us and we will delete it.</p>
       </section>
 
       <section class="legal-section">
         <h2>Changes</h2>
         <p>If this policy changes, the new version will be posted on this page with a new date. This version replaces an earlier, longer one written while the website used Google Analytics; it no longer does.</p>
-        <p>This policy is also available <a href="/es/privacy.html" lang="es" hreflang="es">in Spanish</a>.</p>
+        <p>This policy is also available <a href="/es/privacy.html" lang="es" hreflang="es">in Spanish</a> and <a href="/pt/privacy.html" lang="pt-BR" hreflang="pt-BR">in Portuguese</a>.</p>
       </section>
 
     </div>

@@ -46,7 +46,7 @@
     <div class="container legal-hero__inner">
       <span class="section-eyebrow">Legal</span>
       <h1>Política de privacidade</h1>
-      <p class="legal-hero__meta">Última atualização: <strong>1 de outubro de 2026</strong></p>
+      <p class="legal-hero__meta">Última atualização: <strong>14 de novembro de 2026</strong></p>
     </div>
   </section>
 
@@ -55,7 +55,7 @@
     <div class="container legal-container">
 
       <div class="legal-notice">
-        <strong>Em resumo:</strong> o app não coleta nada. Suas receitas, fotos e anotações ficam no seu celular e nunca chegam até nós. O site não usa cookies nem ferramentas de análise. Os únicos dados pessoais que vemos são os de um e-mail que você decida nos enviar.
+        <strong>Em resumo:</strong> suas receitas, fotos e anotações ficam no seu celular, e não guardamos nada delas. A exceção é a importação com IA do Damson Kitchen Premium, e só quando você a usa: ela envia as palavras da receita que você está importando — nunca uma foto nem suas outras receitas — para colocá-las em ordem, e nada delas fica guardado do nosso lado. O site não usa cookies nem ferramentas de análise.
       </div>
 
       <p><em>Tradução da <a href="/privacy.html" lang="en" hreflang="en">versão em inglês</a>, que prevalece em caso de divergência, sem prejuízo dos seus direitos segundo a lei do seu país.</em></p>
@@ -67,14 +67,32 @@
 
       <section class="legal-section">
         <h2>O app</h2>
-        <p>Não há contas, nem ferramentas de análise, nem publicidade, nem rastreamento de nenhum tipo. Tudo o que você coloca no app (receitas, coleções, anotações, cardápios e fotos) fica guardado só no seu celular. <strong>Nada disso chega até nós, e não temos nenhum servidor que pudesse receber.</strong></p>
+        <p>Não há contas, nem ferramentas de análise, nem publicidade, nem rastreamento de nenhum tipo. Tudo o que você coloca no app (receitas, coleções, anotações, cardápios e fotos) fica guardado só no seu celular. <strong>Sua coleção de receitas nunca chega até nós.</strong> As únicas coisas que saem do seu celular para o nosso serviço estão descritas em <a href="#ai-import">Importar com IA</a> e <a href="#premium">Damson Kitchen Premium</a>, e só quando você usa esses recursos.</p>
         <ul>
           <li><strong>Ao importar uma receita</strong>, a página que você pede é baixada diretamente pelo seu celular. Esse site vê o pedido como qualquer visita; ele não passa por nós.</li>
           <li><strong>Ao exportar</strong>, um arquivo de backup é criado no seu celular e entregue ao que você escolher para enviá-lo. Ele nunca chega até nós.</li>
-          <li><strong>Ao escanear uma receita</strong>, a foto é lida no seu celular. Ela não é enviada para lugar nenhum.</li>
+          <li><strong>Ao escanear uma receita</strong>, as palavras da foto são lidas no seu celular. A foto não é enviada para lugar nenhum, nem quando você depois organiza essas palavras com IA.</li>
           <li><strong>Ao compartilhar uma receita</strong>, a mensagem é entregue ao app que você escolher. Nada é enviado para nós.</li>
         </ul>
         <p><strong>O backup do próprio Android.</strong> Seu celular pode copiar os dados do app para o seu Google Drive pessoal, para restaurá-los num celular novo. Essa cópia é sua: não podemos vê-la nem lê-la. As fotos das receitas não entram. Você pode desativar isso nas configurações do celular, em <strong>Sistema &rarr; Backup</strong>.</p>
+      </section>
+
+      <section class="legal-section" id="ai-import">
+        <h2>Importar com IA</h2>
+        <p>Organizar com IA e Encontrar a receita com IA são opcionais, fazem parte do Damson Kitchen Premium, e nada é enviado até você decidir usá-los. Na primeira vez, o app explica o que é enviado e pede que você confirme.</p>
+        <ul>
+          <li><strong>O que é enviado:</strong> o texto que você está importando — as palavras da caixa de importação (digitadas, coladas ou lidas de um escaneamento no seu celular), ou o texto legível de uma página de receita que você compartilhou com o app, que o seu celular baixa e recorta antes — e um identificador aleatório que o app cria uma única vez, na primeira vez que você usa o recurso. Nada mais: nem suas fotos, nem suas outras receitas, nem sua localização, seu nome ou seus contatos.</li>
+          <li><strong>Para onde vai:</strong> para o nosso serviço em api.damsonkitchen.com, que roda na Cloudflare, e de lá para a Anthropic, a empresa que criou o Claude, que coloca a receita em ordem e a devolve para o seu celular. O resultado aparece na caixa de importação para você conferir; nada é salvo até você importar.</li>
+          <li><strong>O que fica guardado:</strong> nosso serviço não guarda nem registra o texto. Ele anota só quantas palavras foram enviadas e o tamanho da resposta, para acompanhar os custos. A Cloudflare, como qualquer provedor de rede, trata o seu endereço IP e os dados básicos da solicitação para prestar o serviço e mantê-lo seguro. A Anthropic trata o texto como nossa prestadora de serviço, segundo seus termos comerciais, que não permitem que ela treine seus modelos com ele; a Anthropic pode guardá-lo por um tempo limitado para monitorar segurança e abuso, como descreve sua política de privacidade.</li>
+          <li><strong>O identificador aleatório</strong> é usado só para evitar que o serviço seja usado em excesso. Ele não está ligado a você, ao hardware do seu celular nem a mais nada; ao desinstalar o app, ele desaparece.</li>
+          <li><strong>Para quê:</strong> para oferecer o recurso que você pediu.</li>
+        </ul>
+        <p>A Cloudflare e a Anthropic têm sede nos Estados Unidos. Quando o seu texto é tratado fora do Reino Unido ou da UE, ele é protegido pelas garantias que essas empresas oferecem para transferências internacionais, como as cláusulas contratuais padrão. Veja a <a href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener">política de privacidade da Anthropic</a> e a <a href="https://www.cloudflare.com/pt-br/privacypolicy/" target="_blank" rel="noopener">política de privacidade da Cloudflare</a>.</p>
+      </section>
+
+      <section class="legal-section" id="premium">
+        <h2>Damson Kitchen Premium</h2>
+        <p>Escanear e importar com IA fazem parte do Damson Kitchen Premium, uma assinatura que você compra pelo Google Play. O Google cuida do pagamento; nunca vemos os dados do seu cartão nem do seu banco. Para verificar que uma solicitação vem de um assinante, o app envia a referência de compra da assinatura (um código que o Google Play dá ao app) com cada importação com IA, e nosso serviço pergunta ao Google se ela está ativa. Guardamos uma forma embaralhada dessa referência, nunca a referência em si: por alguns minutos junto com a resposta do Google, para não precisar perguntar de novo a cada solicitação, e, enquanto você usa a importação com IA, junto com uma contagem dos seus pedidos de IA, para aplicar o limite de uso justo dos nossos <a href="/pt/terms.html">termos de uso</a> (a contagem recomeça todo mês). Não guardamos mais nada sobre a sua compra. Escanear, por si só, funciona inteiramente no seu celular e não envia nada. Você pode gerenciar ou cancelar a assinatura no Google Play quando quiser.</p>
       </section>
 
       <section class="legal-section">
@@ -90,18 +108,18 @@
 
       <section class="legal-section" id="your-data">
         <h2>Excluir seus dados</h2>
-        <p>Não há nenhuma conta para excluir nem nada seu do nosso lado. Para excluir uma receita ou uma coleção, exclua no app. Para excluir tudo, desinstale o app. Se quiser guardar suas receitas antes, use <strong>Configurações &rarr; Dados e backup &rarr; Exportar meus dados</strong> antes de desinstalar.</p>
+        <p>Não há nenhuma conta para excluir, e nenhuma das suas receitas fica guardada do nosso lado. A única coisa que guardamos é a referência de compra embaralhada e a contagem de pedidos descritas em <a href="#premium">Damson Kitchen Premium</a>, que não podem ser ligadas a você. Para excluir uma receita ou uma coleção, exclua no app. Para excluir tudo, desinstale o app. Se quiser guardar suas receitas antes, use <strong>Configurações &rarr; Dados e backup &rarr; Exportar meus dados</strong> antes de desinstalar.</p>
       </section>
 
       <section class="legal-section">
         <h2>Seus direitos</h2>
-        <p>Pela Lei Geral de Proteção de Dados (LGPD) e pelas leis de proteção de dados do Reino Unido e da UE, você pode nos pedir uma cópia dos dados pessoais que tivermos sobre você, pedir que os corrijamos ou excluamos, ou se opor à forma como os usamos. Na prática, isso significa os e-mails que você nos enviou. Escreva para <a href="mailto:support@zayvori.com">support@zayvori.com</a> e responderemos em até um mês.</p>
+        <p>Pela Lei Geral de Proteção de Dados (LGPD) e pelas leis de proteção de dados do Reino Unido e da UE, você pode nos pedir uma cópia dos dados pessoais que tivermos sobre você, pedir que os corrijamos ou excluamos, ou se opor à forma como os usamos. Na prática, isso significa os e-mails que você nos enviou; não guardamos nada da importação com IA. Escreva para <a href="mailto:support@zayvori.com">support@zayvori.com</a> e responderemos em até um mês.</p>
         <p>Você também pode apresentar uma reclamação a uma autoridade de proteção de dados: no Brasil, a <strong>Autoridade Nacional de Proteção de Dados</strong> (<a href="https://www.gov.br/anpd" target="_blank" rel="noopener">gov.br/anpd</a>); no Reino Unido, o <strong>Information Commissioner's Office</strong> (<a href="https://ico.org.uk" target="_blank" rel="noopener">ico.org.uk</a>); ou a autoridade do país onde você mora.</p>
       </section>
 
       <section class="legal-section">
         <h2>Crianças e adolescentes</h2>
-        <p>O Damson Kitchen não é voltado para crianças nem adolescentes, e o app não coleta nada de ninguém. Se um menor de idade nos escreveu e o pai, a mãe ou o responsável quiser que excluamos esse e-mail, escreva para nós e o excluiremos.</p>
+        <p>O Damson Kitchen não é voltado para crianças nem adolescentes. Se um menor de idade nos escreveu e o pai, a mãe ou o responsável quiser que excluamos esse e-mail, escreva para nós e o excluiremos.</p>
       </section>
 
       <section class="legal-section">
