@@ -126,7 +126,7 @@ Features that do NOT exist (do not add to marketing copy):
 
 ## Legal pages
 
-The `[Your Legal Entity Name]` / `[Registered Address]` / `[Your State]` placeholders are **filled in** — the pages now name an independent UK individual developer trading as Damson Kitchen, with no company behind it, contactable at `hello@damsonkitchen.com`. Google requires a working privacy policy URL and would not accept one naming a placeholder entity, so this had to be settled before the listing.
+The `[Your Legal Entity Name]` / `[Registered Address]` / `[Your State]` placeholders are **filled in** — the pages now name an independent UK individual developer trading as Damson Kitchen, with no company behind it, contactable at `support@zayvori.com`. Google requires a working privacy policy URL and would not accept one naming a placeholder entity, so this had to be settled before the listing.
 
 **A registered address becomes unavoidable at monetisation, not before.** Trader status under the EU DSA is what forces a published name and address, and it is triggered by charging — so the current free, purchase-free app can be declared non-trader. The moment the one-off unlock ships, that changes and the address goes on the listing. Worth arranging a registered-office or virtual address before building the billing flow rather than at the point of shipping it.
 
