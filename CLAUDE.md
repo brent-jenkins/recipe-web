@@ -115,6 +115,7 @@ The companion app (`recipe-app`) is an Expo/React Native app, fully local-only �
 - **Light / dark / system theme**
 - **Export / Import** — bundle the whole library into one backup file via Settings → Data & Backup. We never receive or store it
 - **Local storage** — everything on-device via `expo-sqlite` and file storage
+- **Damson Kitchen Premium** (from 1.1, $2.99/month or $29.99/year, 7-day trial, Google Play): **Scan from a photo** (read on the phone; the photo never leaves it); **Import with AI** (box text or a link → editor, never saved directly; organizes, never writes); **Cook with AI** — **Change a recipe** (a new copy; the original is untouched), **What can I make?** (up to three recipes from what you have), **Plan a menu** (2–6 dishes for an occasion, added to the planner and shopping list in one tap); and a **mic** on the Cook with AI boxes (the phone's own speech recognition; the app gets words, never audio). Fair use: 25 requests in the trial, 100 a month; import/change 1, ideas 2, menu 3. "Tidy with AI" was the pre-release name — never use it. AI is "a helper, not an adviser": the terms (#ai) carry the allergy, food-safety and no-health-claims wording.
 
 Features that do NOT exist (do not add to marketing copy):
 - Accounts, sign-up, sign-in, or any user profile
